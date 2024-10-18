@@ -9,6 +9,14 @@ import {
 import "../index.css";
 import { HoursTable, LexicalRichText } from "@yext/pages-components";
 import Hours from "../components/hours";
+import {
+  BsFacebook,
+  BsInstagram,
+  BsLinkedin,
+  BsTiktok,
+  BsTwitter,
+  BsYoutube,
+} from "react-icons/bs";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -223,12 +231,13 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
               </div>
 
               {/* Google Maps Section */}
-              <div className="border border-gray-300 rounded-lg overflow-hidden">
-                <img
-                  src="" // Replace with your Google Maps image URL
-                  alt="Chesterfield Location Map"
-                  className="w-full h-48 object-cover"
-                />
+              <div className="flex gap-8 mt-24">
+                <BsFacebook className="h-8 w-8" />
+                <BsTwitter className="h-8 w-8" />
+                <BsInstagram className="h-8 w-8" />
+                <BsLinkedin className="h-8 w-8" />
+                <BsYoutube className="h-8 w-8" />
+                <BsTiktok className="h-8 w-8" />
               </div>
             </div>
           </div>
@@ -236,14 +245,14 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
       </section>
 
       {/* Welcome Section */}
-      <section className="container mx-auto p-6 flex justify-between gap-28">
+      <section className="container mx-auto p-6 flex justify-between gap-28 text-primary">
         <div className="w-1/2">
-          <h2 className="text-3xl font-bold mb-6 text-center">
-            Welcome
+          <h2 className="text-5xl font-bold mb-6">
+            <span className="text-3xl">Welcome</span>
             <br /> Hand & Stone Massage and Facial Spa in {address.city},{" "}
             {address.region}
           </h2>
-          <p className="text-lg mb-4 text-center">{description}</p>
+          <p className="text-lg mb-4">{description}</p>
         </div>
         <div className="flex flex-col gap-4 w-1/2">
           <Hours hours={hours} title="Hours" />
