@@ -118,9 +118,9 @@ const Location: Template<TemplateRenderProps> = ({
   return (
     <>
 
-      <div className="bg-blue-700 text-white py-3">
+      <div className="bg-[#043b76] text-white py-3">
         <div className="container mx-auto flex justify-end">
-          <a href="#" className="text-sm font-semibold px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded">
+          <a href="#" className="text-sm font-semibold px-4 py-2 bg-[#043b76] hover:bg-blue-500 rounded">
             Account
           </a>
         </div>
@@ -154,51 +154,60 @@ const Location: Template<TemplateRenderProps> = ({
         </div>
       </section>
 
-      {/* Section with Image on Left and Details/Buttons on Right */}
-      <section className="bg-gray-100 py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+     {/* Section with Image on Left and Details/Buttons on Right */}
+<section className="bg-gray-100 py-12">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-            {/* Left Section - Image */}
-            <div>
-              <img
-                src="https://handandstone.com/wp-content/uploads/2023/02/Location-Page-Placeholder-Image.jpg"
-                alt="Chesterfield Location"
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
+      {/* Left Section - Image */}
+      <div>
+        <img
+          src="https://handandstone.com/wp-content/uploads/2023/02/Location-Page-Placeholder-Image.jpg"
+          alt="Chesterfield Location"
+          className="w-full h-full object-cover rounded-lg"
+        />
+      </div>
 
-            {/* Right Section - Location Details */}
-            <div>
-              <h1 className="text-3xl font-bold text-gray-800 mb-4">Hand & Stone - Chesterfield, VA</h1>
-              <p className="text-lg text-gray-600 mb-2">Call us: <span className="font-semibold text-blue-700">(804) 639-1113</span></p>
-              <p className="text-lg text-gray-600 mb-4">Find us: <span className="font-semibold text-blue-700">7204 Hancock Village Drive, Chesterfield, VA 23832</span></p>
+      {/* Right Section - Location Details */}
+      <div>
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">Hand & Stone - Chesterfield, VA</h1>
+        <p className="text-lg text-gray-600 mb-2">Call us: <span className="font-semibold text-blue-700">(804) 639-1113</span></p>
+        <p className="text-lg text-gray-600 mb-4">Find us: <span className="font-semibold text-blue-700">7204 Hancock Village Drive, Chesterfield, VA 23832</span></p>
 
-              <div className="flex flex-col space-y-4">
-                <a
-                  href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                  style={{ backgroundColor: '#043b76' }}  
-                  className="text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center">
-                  Book an Appointment
-                </a>
-                <a
-                  href="https://handandstone.com/locations/chesterfield/spa-menu/"
-                  style={{ backgroundColor: '#043b76' }}  
-                  className="text-white text-lg px-6 py-3 rounded hover:bg-gray-700 text-center">
-                  View Spa Menu
-                </a>
-                <a
-                  href="https://handandstone.com/gift-cards?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                  style={{ backgroundColor: '#043b76' }}  
-                  className="text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center">
-                  Buy a Gift Card
-                </a>
-              </div>
-            </div>
-
-          </div>
+        <div className="flex flex-col space-y-4 mb-4">
+          <a
+            href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
+            style={{ backgroundColor: '#043b76' }}  
+            className="text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center">
+            Book an Appointment
+          </a>
+          <a
+            href="https://handandstone.com/locations/chesterfield/spa-menu/"
+            style={{ backgroundColor: '#043b76' }}  
+            className="text-white text-lg px-6 py-3 rounded hover:bg-gray-700 text-center">
+            View Spa Menu
+          </a>
+          <a
+            href="https://handandstone.com/gift-cards?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
+            style={{ backgroundColor: '#043b76' }}  
+            className="text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center">
+            Buy a Gift Card
+          </a>
         </div>
-      </section>
+
+        {/* Google Maps Section */}
+        <div className="border border-gray-300 rounded-lg overflow-hidden">
+          <img 
+            src="URL_OF_YOUR_MAP_IMAGE" // Replace with your Google Maps image URL
+            alt="Chesterfield Location Map"
+            className="w-full h-48 object-cover"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 
