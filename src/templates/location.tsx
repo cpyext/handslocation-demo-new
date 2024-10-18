@@ -139,7 +139,7 @@ const Location: Template<TemplateRenderProps> = ({
       </header>
 
       {/* Hero Section with Image */}
-      <section className="relative">
+      {/* <section className="relative">
         <img
           src="https://handandstone.com/wp-content/uploads/2023/02/Location-Page-Placeholder-Image.jpg"
           alt="Chesterfield Location"
@@ -151,7 +151,7 @@ const Location: Template<TemplateRenderProps> = ({
             <p className="text-lg">Experience our full range of spa services</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
      {/* Section with Image on Left and Details/Buttons on Right */}
 <section className="bg-gray-100 py-12">
@@ -195,13 +195,13 @@ const Location: Template<TemplateRenderProps> = ({
         </div>
 
         {/* Google Maps Section */}
-        <div className="border border-gray-300 rounded-lg overflow-hidden">
+        {/* <div className="border border-gray-300 rounded-lg overflow-hidden">
           <img 
             src="https://a.mktgcdn.com/p/oVIeesvJyr4icqzSQiJoIOuPhH-QKQoKm7HFUIQfAU8/260x195.png" // Replace with your Google Maps image URL
             alt="Chesterfield Location Map"
             className="w-full h-48 object-cover"
           />
-        </div>
+        </div> */}
       </div>
 
     </div>
@@ -286,19 +286,19 @@ const Location: Template<TemplateRenderProps> = ({
             <img src="https://handandstone.com/wp-content/uploads/2023/01/Massage_Overview-Hero-1.jpg" alt="Massage" className="mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4">Massages</h3>
             <p className="mb-4">Relax and unwind with our professional massage services.</p>
-            <a href="https://handandstone.com/massage/" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Massages</a>
+            <a href="https://handandstone.com/massage/" style={{ backgroundColor: '#043b76' }}  className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Massages</a>
           </div>
           <div className="bg-white p-6 shadow-lg rounded-lg text-center">
             <img src="https://handandstone.com/wp-content/uploads/2023/01/Facial_Overview-Hero.jpg" alt="Facial" className="mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4">Facials</h3>
             <p className="mb-4">Rejuvenate your skin with our customized facial treatments.</p>
-            <a href="https://handandstone.com/facials/" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Facials</a>
+            <a href="https://handandstone.com/facials/" style={{ backgroundColor: '#043b76' }} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Facials</a>
           </div>
           <div className="bg-white p-6 shadow-lg rounded-lg text-center">
             <img src="https://handandstone.com/wp-content/uploads/2023/02/Cryoskin_Overview-Hero-1.jpg" alt="Spa Treatments" className="mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4">Neveskin™</h3>
             <p className="mb-4">Shape, Tone, and Firm Your Physique. No suction, no surgery, just incredible results</p>
-            <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Spa Treatments</a>
+            <a href="#" style={{ backgroundColor: '#043b76' }} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Spa Treatments</a>
           </div>
         </div>
       </section>
@@ -360,16 +360,19 @@ const Location: Template<TemplateRenderProps> = ({
           <a
             href="https://handandstone.com/memberships/"
             style={{ backgroundColor: '#043b76' }}  
-            className="text-white px-4 py-2 mt-6 inline-block rounded hover:bg-blue-500">
+            className="text-white px-4 py-2 mt-6 inline-block rounded hover:bg-[#043b76]-500">
             Join Now
           </a>
         </div>
       </section>
 
-      <div><FaqAccordion> 
-      
      
-
+     
+     
+     
+     
+      <div><FaqAccordion> 
+  
       <section className="py-12">
   <div className="container mx-auto px-4">
     {/* FAQs Section Label */}
@@ -378,7 +381,7 @@ const Location: Template<TemplateRenderProps> = ({
     <div className="space-y-4">
       {/* FAQ 1 */}
       <div className="border border-gray-300 rounded-lg">
-        <div className="p-4 cursor-pointer" style={{ color: '#000000' }}>
+        <div className="p-4 cursor-pointer" style={{ color: 'red' }}>
           <h3 className="text-lg font-bold">Am I supposed to leave a tip?</h3>
         </div>
         <div className="px-4 pb-4 hidden">
@@ -387,8 +390,8 @@ const Location: Template<TemplateRenderProps> = ({
           </p>
           <a
             href="https://handandstone.ca/faqs-massage-therapist/"
-            className="mt-2 inline-block text-sm font-semibold underline"
-            style={{ color: '#000000' }}>
+            style={{ backgroundColor: '#043b76' }}  
+            className="text-white px-4 py-2 mt-6 inline-block rounded hover:bg-blue-500">
             Learn More
           </a>
         </div>
@@ -406,10 +409,11 @@ const Location: Template<TemplateRenderProps> = ({
           </p>
           <a
             href="https://handandstone.ca/faqs-massage-therapist/"
-            className="mt-2 inline-block text-sm font-semibold underline"
-            style={{ color: '#000000' }}>
+            className="text-white px-4 py-2 rounded hover:bg-blue-500"
+            style={{ backgroundColor: '#043b76' }}>
             Learn More
           </a>
+          
         </div>
       </div>
 
