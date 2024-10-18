@@ -131,9 +131,10 @@ const Static: Template<TemplateRenderProps> = ({ document }) => {
             </div>
             <div>
               <h3 className="text-2xl font-bold">Hours of Operation</h3>
-              <p className="mt-2">Monday - Friday: 9:00 AM - 9:00 PM</p>
-              <p>Saturday: 9:00 AM - 8:00 PM</p>
-              <p>Sunday: 10:00 AM - 6:00 PM</p>
+              <p className="mt-2">Monday : 9:00 AM - 9:00 PM</p>
+              <p> Tuesday: 9:00 AM - 9:00 PM</p> <p> Wednesday: 9:00 AM - 9:00 PM</p><p> Thursday: 9:00 AM - 9:00 PM</p><p> Friday: 9:00 AM - 9:00 PM</p>
+              <p>Saturday: 8:00 AM - 8:00 PM</p>
+              <p>Sunday: 8:00 AM - 8:00 PM</p>
             </div>
           </div>
 
