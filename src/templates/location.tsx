@@ -455,6 +455,62 @@ const Location: Template<TemplateRenderProps> = ({
 </section>
 
 
+<bottom className="bg-[#043b76] py-12">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      {/* Hand & Stone Section */}
+      <div className="border-r border-gray-300 pr-4">
+        <h3 className="text-lg font-bold mb-4">Hand & Stone</h3>
+        <ul className="space-y-2">
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Contact Us</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Own A Franchise</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Hand & Stone Canada</a></li>
+        </ul>
+      </div>
+
+      {/* Services Section */}
+      <div className="border-r border-gray-300 pr-4">
+        <h3 className="text-lg font-bold mb-4">Services</h3>
+        <ul className="space-y-2">
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Massages</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Facials</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Neveskin</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Hair Removal</a></li>
+        </ul>
+      </div>
+
+      {/* About Us Section */}
+      <div className="border-r border-gray-300 pr-4">
+        <h3 className="text-lg font-bold mb-4">About Us</h3>
+        <ul className="space-y-2">
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Our Story</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Touchpoints: News & Blog</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Join the Team</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Health & Safety</a></li>
+        </ul>
+      </div>
+
+      {/* Terms and Conditions Section */}
+      <div>
+        <h3 className="text-lg font-bold mb-4">Terms and Conditions</h3>
+        <ul className="space-y-2">
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Customer Bill of Rights</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Gift Card Program Terms & Conditions</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Reward Points Terms & Conditions</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Rules, Terms & Conditions</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Privacy Policy</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Cookie Policy</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">California Residents</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-blue-600">Policy on Non Discrimination & Gender Identity</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</bottom>
+
+
+
 
       <footer className="bg-gray-900 text-white p-6">
         <div className="container mx-auto text-center">
