@@ -84,10 +84,18 @@ const Static: Template<TemplateRenderProps> = ({ document }) => {
   return (
     <>
     
-     <div class="text-blue text-3xl">Welcome to the New York City branch</div>
-     <header className="bg-blue-900 text-white p-6">
+    <div className="bg-blue-700 text-white py-3">
+      <div className="container mx-auto flex justify-end">
+        <a href="#" className="text-sm font-semibold px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded">
+          Account
+        </a>
+      </div>
+    </div>
+     <header className="bg-white-900 text-blue p-6">
         <div className="container mx-auto flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold">Hand & Stone</a>
+          <a href="#">
+  <img src="https://handandstone.com/wp-content/uploads/2022/11/HS_Logo.png" alt="Hand & Stone Logo" className="h-10 w-auto" />
+</a>
           <nav>
             <a href="#" className="text-lg mx-4 hover:underline">Locations</a>
             <a href="#" className="text-lg mx-4 hover:underline">Services</a>
@@ -153,6 +161,156 @@ const Static: Template<TemplateRenderProps> = ({ document }) => {
           </div>
         </div>
       </section>
+
+
+
+
+
+
+ {/* Welcome Section */}
+ <section className="container mx-auto p-6">
+        <h2 className="text-3xl font-bold mb-6 text-center">Welcome to Hand & Stone Chesterfield</h2>
+        <p className="text-lg mb-4 text-center">
+          Welcome to Hand & Stone Massage and Facial Spa in Chesterfield, where we provide
+          top-quality massages, facials, and other spa services. Whether you're looking for a
+          rejuvenating treatment or a relaxing escape, we are here for you.
+        </p>
+      </section>
+
+
+
+
+{/* Introductory Offers Section */}
+<section className="bg-blue-100 py-8">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Introductory Offers</h2>
+          <p className="text-lg mb-8">At Hand & Stone Chesterfield, we offer great introductory prices for first-time visitors.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 shadow-lg rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">Massage</h3>
+              <p className="mb-4">Introductory 1-Hour Massage for only $59.95</p>
+              <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Learn More</a>
+            </div>
+            <div className="bg-white p-6 shadow-lg rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">Facial</h3>
+              <p className="mb-4">Introductory 1-Hour Facial for only $59.95</p>
+              <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Learn More</a>
+            </div>
+            <div className="bg-white p-6 shadow-lg rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">Hot Stone Massage</h3>
+              <p className="mb-4">Introductory 1-Hour Hot Stone Massage for only $79.95</p>
+              <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+{/* Our Services Section */}
+<section className="container mx-auto p-6">
+        <h2 className="text-3xl font-bold mb-6 text-center">Our Services</h2>
+        <p className="text-lg mb-8 text-center">
+          We offer a range of services including massages, facials, and spa treatments. Discover what Hand & Stone Chesterfield has to offer!
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white p-6 shadow-lg rounded-lg text-center">
+            <img src="https://via.placeholder.com/150" alt="Massage" className="mx-auto mb-4" />
+            <h3 className="text-2xl font-bold mb-4">Massages</h3>
+            <p className="mb-4">Relax and unwind with our professional massage services.</p>
+            <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Massages</a>
+          </div>
+          <div className="bg-white p-6 shadow-lg rounded-lg text-center">
+            <img src="https://via.placeholder.com/150" alt="Facial" className="mx-auto mb-4" />
+            <h3 className="text-2xl font-bold mb-4">Facials</h3>
+            <p className="mb-4">Rejuvenate your skin with our customized facial treatments.</p>
+            <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Facials</a>
+          </div>
+          <div className="bg-white p-6 shadow-lg rounded-lg text-center">
+            <img src="https://via.placeholder.com/150" alt="Spa Treatments" className="mx-auto mb-4" />
+            <h3 className="text-2xl font-bold mb-4">Spa Treatments</h3>
+            <p className="mb-4">Indulge in luxury with our range of relaxing spa treatments.</p>
+            <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Spa Treatments</a>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      {/* Gift Cards Section */}
+      <section className="bg-gray-50 py-8">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Gift Cards</h2>
+          <p className="text-lg mb-8">Give the gift of relaxation with Hand & Stone Gift Cards, perfect for any occasion.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 shadow-lg rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">Buy Online</h3>
+              <p className="mb-4">Purchase Hand & Stone Gift Cards conveniently online and send them directly to your loved ones.</p>
+              <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Buy Gift Cards</a>
+            </div>
+            <div className="bg-white p-6 shadow-lg rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">In-Store Purchase</h3>
+              <p className="mb-4">Visit our Chesterfield location to purchase gift cards and pick them up in person.</p>
+              <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Find a Location</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Spa Membership Section */}
+      <section className="bg-blue-100 py-8">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Spa Membership</h2>
+          <p className="text-lg mb-8">Become a member of Hand & Stone and enjoy exclusive benefits and discounts year-round.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 shadow-lg rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">Monthly Massages</h3>
+              <p className="mb-4">Receive a 1-hour massage every month at a discounted membership rate.</p>
+            </div>
+            <div className="bg-white p-6 shadow-lg rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">Facials and Skin Care</h3>
+              <p className="mb-4">Enjoy personalized facials and skin care treatments as part of your membership.</p>
+            </div>
+            <div className="bg-white p-6 shadow-lg rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">Exclusive Discounts</h3>
+              <p className="mb-4">Members enjoy exclusive offers and discounts on additional services and gift cards.</p>
+            </div>
+          </div>
+          <a href="#" className="bg-blue-600 text-white px-4 py-2 mt-6 inline-block rounded hover:bg-blue-500">Join Now</a>
+        </div>
+      </section>
+
+
+{/* Join Our Team Section */}
+<section className="bg-gray-50 py-8">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Join Our Team</h2>
+          <p className="text-lg mb-8">At Hand & Stone Chesterfield, we are always looking for talented and passionate professionals to join our team. If you're a licensed massage therapist, esthetician, or front desk professional, we'd love to hear from you!</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 shadow-lg rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">Massage Therapist</h3>
+              <p className="mb-4">Join our team of professional massage therapists and help clients relax and rejuvenate.</p>
+            </div>
+            <div className="bg-white p-6 shadow-lg rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">Esthetician</h3>
+              <p className="mb-4">Be part of our esthetician team and provide personalized facial and skincare services.</p>
+            </div>
+            <div className="bg-white p-6 shadow-lg rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">Front Desk Associate</h3>
+              <p className="mb-4">Work at the front desk and help clients schedule appointments and manage their spa experiences.</p>
+            </div>
+          </div>
+          <a href="#" className="bg-blue-600 text-white px-4 py-2 mt-6 inline-block rounded hover:bg-blue-500">Apply Now</a>
+        </div>
+      </section>
+
+
 
 
 
