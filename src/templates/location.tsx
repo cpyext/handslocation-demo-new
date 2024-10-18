@@ -8,13 +8,6 @@ import {
   TemplateProps,
   TemplateRenderProps,
 } from "@yext/pages";
-import Banner from "../components/banner";
-import Contact from "../components/contact";
-import Cta from "../components/cta";
-import Hours from "../components/hours";
-import List from "../components/list";
-import PageLayout from "../components/page-layout";
-import StaticMap from "../components/static-map";
 import "../index.css";
 
 /**
@@ -35,13 +28,6 @@ export const config: TemplateConfig = {
       "description",
       "hours",
       "slug",
-      "geocodedCoordinate",
-      "services",
-      "c_associatedAdvisors",
-      "c_associatedTeam",
-      "c_richTextDescription",
-      "c_heroBanner",
-
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -126,12 +112,6 @@ const Location: Template<TemplateRenderProps> = ({
     hours,
     mainPhone,
     geocodedCoordinate,
-    services,
-    c_associatedAdvisors,
-    c_associatedTeam,
-    c_richTextDescription,
-    c_heroBanner,
-    description,
   } = document;
 
 
@@ -197,19 +177,19 @@ const Location: Template<TemplateRenderProps> = ({
               <div className="flex flex-col space-y-4">
                 <a
                   href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                  style={{ backgroundColor: '#043b76' }}  // Replace with your desired hex color
+                  style={{ backgroundColor: '#043b76' }}  
                   className="text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center">
                   Book an Appointment
                 </a>
                 <a
                   href="https://handandstone.com/locations/chesterfield/spa-menu/"
-                  style={{ backgroundColor: '#043b76' }}  // Replace with your desired hex color
+                  style={{ backgroundColor: '#043b76' }}  
                   className="text-white text-lg px-6 py-3 rounded hover:bg-gray-700 text-center">
                   View Spa Menu
                 </a>
                 <a
                   href="https://handandstone.com/gift-cards?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                  style={{ backgroundColor: '#043b76' }}  // Replace with your desired hex color
+                  style={{ backgroundColor: '#043b76' }}  
                   className="text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center">
                   Buy a Gift Card
                 </a>
@@ -247,17 +227,35 @@ const Location: Template<TemplateRenderProps> = ({
             <div className="bg-white p-6 shadow-lg rounded-lg">
               <h3 className="text-2xl font-bold mb-4">Massage</h3>
               <p className="mb-4">Introductory 1-Hour Massage for only $59.95</p>
-              <a href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Book Now</a>
+
+              <a
+                href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
+                style={{ backgroundColor: '#043b76' }}  
+                className="text-white px-4 py-2 rounded hover:bg-blue-500"
+              >
+                Book Now
+              </a>
             </div>
             <div className="bg-white p-6 shadow-lg rounded-lg">
               <h3 className="text-2xl font-bold mb-4">Facial</h3>
               <p className="mb-4">Introductory 1-Hour Facial for only $59.95</p>
-              <a href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Book Now</a>
+              <a
+                href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
+                style={{ backgroundColor: '#043b76' }}  
+                className="text-white px-4 py-2 rounded hover:bg-blue-500"
+              >
+                Book Now
+              </a>
             </div>
             <div className="bg-white p-6 shadow-lg rounded-lg">
               <h3 className="text-2xl font-bold mb-4">Hot Stone Massage</h3>
               <p className="mb-4">1-Hour Hot Stone Massage for only $79.95</p>
-              <a href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Book Now</a>
+              <a
+                href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
+                style={{ backgroundColor: '#043b76' }}  
+                className="text-white px-4 py-2 rounded hover:bg-blue-500">
+                Book Now
+              </a>
             </div>
           </div>
         </div>
@@ -309,12 +307,22 @@ const Location: Template<TemplateRenderProps> = ({
             <div className="bg-white p-6 shadow-lg rounded-lg">
               <h3 className="text-2xl font-bold mb-4">Buy Online</h3>
               <p className="mb-4">Purchase Hand & Stone Gift Cards conveniently online and send them directly to your loved ones.</p>
-              <a href="https://handandstone.zenoti.com/webstoreNew/giftcards/0c4b087e-3de1-4412-b05f-bee1c335f9e8" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Buy Gift Cards</a>
+              <a
+                href="https://handandstone.zenoti.com/webstoreNew/giftcards/0c4b087e-3de1-4412-b05f-bee1c335f9e8"
+                style={{ backgroundColor: '#043b76' }}  
+                className="text-white px-4 py-2 rounded hover:bg-blue-500">
+                Buy Gift Cards
+              </a>
             </div>
             <div className="bg-white p-6 shadow-lg rounded-lg">
               <h3 className="text-2xl font-bold mb-4">In-Store Purchase</h3>
               <p className="mb-4">Visit our Chesterfield location to purchase gift cards and pick them up in person.</p>
-              <a href="https://handandstone.com/locations/" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Find a Location</a>
+              <a
+                href="https://handandstone.com/locations/"
+                style={{ backgroundColor: '#043b76' }}  
+                className="text-white px-4 py-2 rounded hover:bg-blue-500">
+                Find a Location
+              </a>
             </div>
           </div>
         </div>
@@ -341,7 +349,12 @@ const Location: Template<TemplateRenderProps> = ({
               <p className="mb-4">Members enjoy exclusive offers and discounts on additional services and gift cards.</p>
             </div>
           </div>
-          <a href="https://handandstone.com/memberships/" className="bg-blue-600 text-white px-4 py-2 mt-6 inline-block rounded hover:bg-blue-500">Join Now</a>
+          <a
+            href="https://handandstone.com/memberships/"
+            style={{ backgroundColor: '#043b76' }}  
+            className="text-white px-4 py-2 mt-6 inline-block rounded hover:bg-blue-500">
+            Join Now
+          </a>
         </div>
       </section>
 
@@ -365,12 +378,81 @@ const Location: Template<TemplateRenderProps> = ({
               <p className="mb-4">Work at the front desk and help clients schedule appointments and manage their spa experiences.</p>
             </div>
           </div>
-          <a href="#" className="bg-blue-600 text-white px-4 py-2 mt-6 inline-block rounded hover:bg-blue-500">Apply Now</a>
+          <a
+            href="#"
+            style={{ backgroundColor: '#043b76' }}  // Replace with your desired hex color
+            className="text-white px-4 py-2 mt-6 inline-block rounded hover:bg-blue-500">
+            Apply Now
+          </a>
         </div>
       </section>
 
 
+      <div className="overflow-hidden relative">
+  <div className="flex animate-scroll whitespace-nowrap">
+    <img 
+      src="https://handandstone.com/wp-content/uploads/2023/01/HD-7423Miami-024-1.jpg" 
+      alt="Image 1" 
+      className="w-200 h-80 object-cover mr-4"/>
+    <img 
+      src="https://handandstone.com/wp-content/uploads/2023/01/HD-7423Miami-033-1.jpg" 
+      alt="Image 2" 
+      className="w-200 h-80 object-cover mr-4"/>
+    <img 
+      src="https://handandstone.com/wp-content/uploads/2023/01/HD-7423Miami-019-1.jpg" 
+      alt="Image 3" 
+      className="w-200 h-80 object-cover mr-4"/>
+  </div>
+</div>
 
+
+
+
+
+
+<section className="bg-gray-100 py-12">
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-3xl font-bold text-gray-800 mb-4">Sign Up for Special Offers</h2>
+    <p className="text-lg text-gray-600 mb-8">
+      Join our email list to receive special offers and updates!
+    </p>
+    <div className="flex justify-center mb-6">
+      <input 
+        type="email" 
+        placeholder="Enter your email" 
+        className="border border-gray-300 rounded-l-md px-4 py-2 w-80 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+       <a href="https://handandstone.com/locations/chesterfield/" className="bg-[#043b76] text-white px-6 py-2 rounded-r-md inline-block text-center"> Sign up </a>
+    </div>
+    <p className="text-sm text-gray-500 mb-4">
+      By signing up, you agree to receive emails from Hand & Stone.
+    </p>
+
+
+
+
+    {/* Social Media Icons */}
+    <div className="flex justify-center space-x-4">
+      <a href="https://www.facebook.com/handandstoneusa/" target="_blank" rel="noopener noreferrer">
+        <img src="https://handandstone.com/wp-content/uploads/2023/01/Vector-6.png" alt="Facebook" className="w-8 h-8" />
+      </a>
+      <a href="https://www.instagram.com/handandstoneusa/?hl=en" target="_blank" rel="noopener noreferrer">
+        <img src="https://handandstone.com/wp-content/uploads/2023/01/Vector-5.png" alt="Instagram" className="w-8 h-8" />
+      </a>
+      <a href="https://twitter.com/handandstoneusa" target="_blank" rel="noopener noreferrer">
+        <img src="https://handandstone.com/wp-content/uploads/2023/08/twitter_x.png" alt="Twitter" className="w-8 h-8" />
+      </a>
+      <a href="https://www.linkedin.com/company/hand-and-stone-massage-and-facial-spa/" target="_blank" rel="noopener noreferrer">
+        <img src="https://handandstone.com/wp-content/uploads/2023/01/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
+      </a>
+      <a href="https://www.youtube.com/user/HandAndStone/videos?app=desktop" target="_blank" rel="noopener noreferrer">
+        <img src="https://handandstone.com/wp-content/uploads/2023/01/youtube.png" alt="Music" className="w-8 h-8" />
+      </a>
+      <a href="https://www.tiktok.com/@handandstoneusa" target="_blank" rel="noopener noreferrer">
+        <img src="https://handandstone.com/wp-content/uploads/2023/02/tiktok-icon.png" alt="Music" className="w-8 h-8" />
+      </a>
+    </div>
+  </div>
+</section>
 
 
 
