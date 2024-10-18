@@ -1,17 +1,11 @@
 // tailwind.config.js
 
-const { ComponentsContentPath } = require("@yext/search-ui-react");
-
 module.exports = {
-  content: [
-    "./src/**/*.{ts,tsx}",
-    "./lib/**/*.{js,jsx}",
-    ComponentsContentPath,
-  ],
+  content: ["./src/**/*.{ts,tsx}", "./lib/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
-        primary: "var(--primary-color, #2563eb)",
+        primary: "rgba(0, 59, 117,1)",
         "primary-light": "var(--primary-color-light, #dbeafe)",
         "primary-dark": "var(--primary-color-dark, #1e40af)",
         neutral: "var(--neutral-color, #4b5563)",
@@ -33,9 +27,4 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/forms")({
-      strategy: "class",
-    }),
-  ],
 };

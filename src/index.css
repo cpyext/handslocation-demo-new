@@ -94,3 +94,11 @@
 .slick-slider .slick-slide {
   padding: 0 15px;
 }
+
+.cta1-whitebg {
+  @apply w-full flex justify-center items-center text-center bg-primary text-white text-xl py-4 px-4 font-light;
+}
+
+.cta2-whitebg {
+  @apply w-full flex justify-center items-center text-center border-2 border-primary text-primary text-xl py-4 px-4 font-light;
+}

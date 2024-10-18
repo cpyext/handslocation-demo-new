@@ -1,12 +1,10 @@
-
-
 type Hours = {
   title?: string;
   hours: Week;
   children?: React.ReactNode;
 };
 
-interface Week extends Record<string, any> {
+interface Week extends Record {
   monday?: Day;
   tuesday?: Day;
   wednesday?: Day;
@@ -86,7 +84,7 @@ const renderHours = (week: Week) => {
     dayDom.push(<DayRow key={k} dayName={k} day={v} isToday={isDayToday(k)} />);
   }
 
-  return <tbody className="font-normal">{dayDom}</tbody>;
+  return <tbody className="font-normal text-xl flex flex-col">{dayDom}</tbody>;
 };
 
 function isDayToday(dayName: string) {
@@ -115,7 +113,13 @@ const DayRow = (props: DayRow) => {
   const { dayName, day, isToday } = props;
 
   return (
-    <tr className={isToday ? "bg-gray-200 font-bold" : ""}>
+    <tr
+      className={
+        isToday
+          ? "font-bold pb-6 flex justify-between"
+          : " flex justify-between pb-6 "
+      }
+    >
       <td className="capitalize text-left pl-1 pr-4">
         <span>{dayName}</span>
       </td>
