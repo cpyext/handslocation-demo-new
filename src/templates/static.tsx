@@ -97,10 +97,10 @@ const Static: Template<TemplateRenderProps> = ({ document }) => {
   <img src="https://handandstone.com/wp-content/uploads/2022/11/HS_Logo.png" alt="Hand & Stone Logo" className="h-10 w-auto" />
 </a>
           <nav>
-            <a href="#" className="text-lg mx-4 hover:underline">Locations</a>
-            <a href="#" className="text-lg mx-4 hover:underline">Services</a>
-            <a href="#" className="text-lg mx-4 hover:underline">Membership</a>
-            <a href="#" className="text-lg mx-4 hover:underline">Offers</a>
+            <a href="https://handandstone.com/locations/" className="text-lg mx-4 hover:underline">Locations</a>
+            <a href="https://handandstone.com/massage/swedish-massage/" className="text-lg mx-4 hover:underline">Spa Services</a>
+            <a href="https://handandstone.com/memberships/" className="text-lg mx-4 hover:underline">Membership</a>
+            <a href="https://handandstone.com/book-an-appointment/" className="text-lg mx-4 hover:underline">Book an Appointment</a>
           </nav>
         </div>
       </header>
