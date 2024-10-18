@@ -11,7 +11,7 @@ import {
 import "../index.css";
 
 /**
- * Required when Knowledge Graph data is used for a template.
+ * Required when Knowledge Graph data is ued for a template.
  */
 export const config: TemplateConfig = {
   stream: {
