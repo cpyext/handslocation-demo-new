@@ -184,17 +184,17 @@ const Static: Template<TemplateRenderProps> = ({ document }) => {
             <div className="bg-white p-6 shadow-lg rounded-lg">
               <h3 className="text-2xl font-bold mb-4">Massage</h3>
               <p className="mb-4">Introductory 1-Hour Massage for only $59.95</p>
-              <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Learn More</a>
+              <a href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Book Now</a>
             </div>
             <div className="bg-white p-6 shadow-lg rounded-lg">
               <h3 className="text-2xl font-bold mb-4">Facial</h3>
               <p className="mb-4">Introductory 1-Hour Facial for only $59.95</p>
-              <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Learn More</a>
+              <a href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Book Now</a>
             </div>
             <div className="bg-white p-6 shadow-lg rounded-lg">
               <h3 className="text-2xl font-bold mb-4">Hot Stone Massage</h3>
-              <p className="mb-4">Introductory 1-Hour Hot Stone Massage for only $79.95</p>
-              <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Learn More</a>
+              <p className="mb-4">1-Hour Hot Stone Massage for only $79.95</p>
+              <a href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Book Now</a>
             </div>
           </div>
         </div>
@@ -214,21 +214,21 @@ const Static: Template<TemplateRenderProps> = ({ document }) => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-6 shadow-lg rounded-lg text-center">
-            <img src="https://via.placeholder.com/150" alt="Massage" className="mx-auto mb-4" />
+            <img src="https://handandstone.com/wp-content/uploads/2023/01/Massage_Overview-Hero-1.jpg" alt="Massage" className="mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4">Massages</h3>
             <p className="mb-4">Relax and unwind with our professional massage services.</p>
-            <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Massages</a>
+            <a href="https://handandstone.com/massage/" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Massages</a>
           </div>
           <div className="bg-white p-6 shadow-lg rounded-lg text-center">
-            <img src="https://via.placeholder.com/150" alt="Facial" className="mx-auto mb-4" />
+            <img src="https://handandstone.com/wp-content/uploads/2023/01/Facial_Overview-Hero.jpg" alt="Facial" className="mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4">Facials</h3>
             <p className="mb-4">Rejuvenate your skin with our customized facial treatments.</p>
-            <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Facials</a>
+            <a href="https://handandstone.com/facials/" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Facials</a>
           </div>
           <div className="bg-white p-6 shadow-lg rounded-lg text-center">
-            <img src="https://via.placeholder.com/150" alt="Spa Treatments" className="mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-4">Spa Treatments</h3>
-            <p className="mb-4">Indulge in luxury with our range of relaxing spa treatments.</p>
+            <img src="https://handandstone.com/wp-content/uploads/2023/02/Cryoskin_Overview-Hero-1.jpg" alt="Spa Treatments" className="mx-auto mb-4" />
+            <h3 className="text-2xl font-bold mb-4">Neveskin™</h3>
+            <p className="mb-4">Shape, Tone, and Firm Your Physique. No suction, no surgery, just incredible results</p>
             <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Explore Spa Treatments</a>
           </div>
         </div>
@@ -246,12 +246,12 @@ const Static: Template<TemplateRenderProps> = ({ document }) => {
             <div className="bg-white p-6 shadow-lg rounded-lg">
               <h3 className="text-2xl font-bold mb-4">Buy Online</h3>
               <p className="mb-4">Purchase Hand & Stone Gift Cards conveniently online and send them directly to your loved ones.</p>
-              <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Buy Gift Cards</a>
+              <a href="https://handandstone.zenoti.com/webstoreNew/giftcards/0c4b087e-3de1-4412-b05f-bee1c335f9e8" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Buy Gift Cards</a>
             </div>
             <div className="bg-white p-6 shadow-lg rounded-lg">
               <h3 className="text-2xl font-bold mb-4">In-Store Purchase</h3>
               <p className="mb-4">Visit our Chesterfield location to purchase gift cards and pick them up in person.</p>
-              <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Find a Location</a>
+              <a href="https://handandstone.com/locations/" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Find a Location</a>
             </div>
           </div>
         </div>
