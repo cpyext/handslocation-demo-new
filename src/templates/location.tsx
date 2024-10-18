@@ -198,7 +198,7 @@ const Location: Template<TemplateRenderProps> = ({
         {/* Google Maps Section */}
         <div className="border border-gray-300 rounded-lg overflow-hidden">
           <img 
-            src="" // Replace with your Google Maps image URL
+            src="https://a.mktgcdn.com/p/oVIeesvJyr4icqzSQiJoIOuPhH-QKQoKm7HFUIQfAU8/260x195.png" // Replace with your Google Maps image URL
             alt="Chesterfield Location Map"
             className="w-full h-48 object-cover"
           />
