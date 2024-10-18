@@ -105,6 +105,7 @@ const Static: Template<TemplateRenderProps> = ({ document }) => {
         </div>
       </header>
 
+      {/* Hero Section with Image */}
       <section className="relative">
         <img
           src="https://handandstone.com/wp-content/uploads/2023/02/Location-Page-Placeholder-Image.jpg"
@@ -119,45 +120,39 @@ const Static: Template<TemplateRenderProps> = ({ document }) => {
         </div>
       </section>
 
-
-<section className="container mx-auto p-6">
-        <div className="flex flex-wrap">
-          {/* Left Column - Info */}
-          <div className="w-full md:w-2/3 p-4">
-            <h2 className="text-3xl font-bold mb-4">Location Information</h2>
-            <p className="text-lg mb-4">
-              Visit us at our Chesterfield location for rejuvenating massages, facials, and more. Conveniently located near XYZ Street, we are open 7 days a week.
-            </p>
-            <div className="mb-4">
-              <h3 className="text-2xl font-bold">Contact Us</h3>
-              <p className="mt-2">
-                Phone: <a href="tel:+1234567890" className="text-blue-600 underline">+1 (234) 567-890</a>
-              </p>
-              <p>
-                Email: <a href="mailto:info@handandstone.com" className="text-blue-600 underline">info@handandstone.com</a>
-              </p>
-            </div>
+      {/* Section with Image on Left and Details/Buttons on Right */}
+      <section className="bg-gray-100 py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            
+            {/* Left Section - Image */}
             <div>
-              <h3 className="text-2xl font-bold">Hours of Operation</h3>
-              <p className="mt-2">Monday : 9:00 AM - 9:00 PM</p>
-              <p> Tuesday: 9:00 AM - 9:00 PM</p> <p> Wednesday: 9:00 AM - 9:00 PM</p><p> Thursday: 9:00 AM - 9:00 PM</p><p> Friday: 9:00 AM - 9:00 PM</p>
-              <p>Saturday: 8:00 AM - 8:00 PM</p>
-              <p>Sunday: 8:00 AM - 8:00 PM</p>
+              <img
+                src="https://handandstone.com/wp-content/uploads/2023/02/Location-Page-Placeholder-Image.jpg"
+                alt="Chesterfield Location"
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
-          </div>
 
- {/* Right Column - Appointment CTA */}
- <div className="w-full md:w-1/3 p-4 bg-gray-100 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold mb-4">Book Your Appointment</h3>
-            <p className="mb-4">
-              Whether you're looking to relax or treat yourself, book your spa services at our Chesterfield location today!
-            </p>
-            <a
-              href="#"
-              className="block bg-blue-600 text-white text-center py-3 rounded-md hover:bg-blue-500"
-            >
-              Book Online
-            </a>
+            {/* Right Section - Location Details */}
+            <div>
+              <h1 className="text-3xl font-bold text-gray-800 mb-4">Hand & Stone - Chesterfield, VA</h1>
+              <p className="text-lg text-gray-600 mb-2">Call us: <span className="font-semibold text-blue-700">(804) 639-1113</span></p>
+              <p className="text-lg text-gray-600 mb-4">Find us: <span className="font-semibold text-blue-700">7204 Hancock Village Drive, Chesterfield, VA 23832</span></p>
+              
+              <div className="flex flex-col space-y-4">
+                <a href="#" className="bg-blue-600 text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center">
+                  Book an Appointment
+                </a>
+                <a href="#" className="bg-gray-800 text-white text-lg px-6 py-3 rounded hover:bg-gray-700 text-center">
+                  View Spa Menu
+                </a>
+                <a href="#" className="bg-blue-600 text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center">
+                  Buy a Gift Card
+                </a>
+              </div>
+            </div>
+            
           </div>
         </div>
       </section>
