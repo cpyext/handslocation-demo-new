@@ -126,7 +126,6 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
     description,
     c_relatedOffers,
   } = document;
-
   return (
     <>
       <div className="bg-[#043b76] text-white py-3">
@@ -177,72 +176,78 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
         </div>
       </header>
 
-      {/* Section with Image on Left and Details/Buttons on Right */}
-      <section className="bg-gray-100 py-12 bg-primary">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            {/* Left Section - Image */}
-            <div>
-              <img
-                src="https://handandstone.com/wp-content/uploads/2023/02/Location-Page-Placeholder-Image.jpg"
-                alt="Chesterfield Location"
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-
-            {/* Right Section - Location Details */}
-            <div className="text-white">
-              <h1 className="text-3xl font-bold mb-4">
-                {name.split("-")[0]} - {address.city}, {address.region}
-              </h1>
-              <p className="text-lg   mb-2">
-                Call us: <span className="font-semibold ">{mainPhone}</span>
-              </p>
-              <p className="text-lg   mb-4">
-                Find us:
-                <span className="font-semibold ">
-                  {address.line1}, {address.city}, {address.region}{" "}
-                  {address.postalCode}
-                </span>
-              </p>
-
-              <div className="flex gap-4 mb-4 items-center">
-                <a
-                  href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                  style={{ backgroundColor: "#043b76" }}
-                  className="text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center border border-white flex justify-center"
-                >
-                  Book an Appointment
-                </a>
-                <a
-                  href="https://handandstone.com/locations/chesterfield/spa-menu/"
-                  style={{ backgroundColor: "#043b76" }}
-                  className="text-white text-lg px-6 py-3 rounded hover:bg-gray-700 text-center border border-white flex justify-center"
-                >
-                  View Spa Menu
-                </a>
-                <a
-                  href="https://handandstone.com/gift-cards?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                  style={{ backgroundColor: "#043b76" }}
-                  className="text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center border border-white flex justify-center"
-                >
-                  Buy a Gift Card
-                </a>
+      {/* Hero section */}
+      <div className="relative bg-primary text-white">
+        <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8 flex-row-reverse">
+          <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
+            <div className="mx-auto max-w-2xl lg:mx-0">
+              <div className="hidden sm:mt-32 sm:flex lg:mt-16">
+                <div className="relative rounded-full px-3 py-1 text-xl leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                  {name.split("-")[0]}
+                </div>
               </div>
+              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+                {address.city}, {address.region}
+              </h1>
+              <p className="mt-6 text-xl leading-8 ">
+                <span className="font-bold">Call us: </span>{" "}
+                {mainPhone
+                  ? mainPhone
+                      .replace("+1", "")
+                      .replace(/\D+/g, "")
+                      .replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")
+                  : `(610) 363-8020`}
+              </p>
+              <p className="mt-6 text-xl leading-8 ">
+                <span className="font-bold">Find us: </span> {address.line1},{" "}
+                {address.city}, {address.region} {address.postalCode}
+              </p>
+              <div className="mt-10 flex flex-col items-center gap-x-6">
+                <div className="flex gap-4 mb-4 items-center">
+                  <a
+                    href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
+                    style={{ backgroundColor: "#043b76" }}
+                    className="text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center border border-white flex justify-center"
+                  >
+                    Book an Appointment
+                  </a>
+                  <a
+                    href="https://handandstone.com/locations/chesterfield/spa-menu/"
+                    style={{ backgroundColor: "#043b76" }}
+                    className="text-white text-lg px-6 py-3 rounded hover:bg-gray-700 text-center border border-white flex justify-center"
+                  >
+                    View Spa Menu
+                  </a>
+                  <a
+                    href="https://handandstone.com/gift-cards?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
+                    style={{ backgroundColor: "#043b76" }}
+                    className="text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center border border-white flex justify-center"
+                  >
+                    Buy a Gift Card
+                  </a>
+                </div>
 
-              {/* Google Maps Section */}
-              <div className="flex gap-8 mt-24">
-                <BsFacebook className="h-8 w-8" />
-                <BsTwitter className="h-8 w-8" />
-                <BsInstagram className="h-8 w-8" />
-                <BsLinkedin className="h-8 w-8" />
-                <BsYoutube className="h-8 w-8" />
-                <BsTiktok className="h-8 w-8" />
+                {/* Google Maps Section */}
+                <div className="flex gap-8 mt-24">
+                  <BsFacebook className="h-8 w-8" />
+                  <BsTwitter className="h-8 w-8" />
+                  <BsInstagram className="h-8 w-8" />
+                  <BsLinkedin className="h-8 w-8" />
+                  <BsYoutube className="h-8 w-8" />
+                  <BsTiktok className="h-8 w-8" />
+                </div>
               </div>
             </div>
           </div>
+          <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
+            <img
+              alt=""
+              src="https://images.unsplash.com/photo-1498758536662-35b82cd15e29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2102&q=80"
+              className="aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
+            />
+          </div>
         </div>
-      </section>
+      </div>
 
       {/* Welcome Section */}
       <section className="container mx-auto p-6 flex justify-between gap-28 text-primary">
@@ -264,37 +269,8 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
         </div>
       </section>
 
-      {/* Introductory Offers Section */}
-      <section className="bg-white py-8 text-primary">
-        <div className="container mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-6">Introductory Offers</h2>
-
-          <div className="grid grid-cols-3 gap-16 w-full">
-            {c_relatedOffers.map((item, index) => {
-              return (
-                <div className="flex flex-col gap-8" key={index}>
-                  <p className="text-2xl">{item.name}</p>
-                  <h2 className="text-6xl">${item.price.value}</h2>
-                  <hr className="text-black" />
-                  <div className="h-12">
-                    {item.shortDescriptionV2 && (
-                      <LexicalRichText
-                        serializedAST={JSON.stringify(
-                          item.shortDescriptionV2.json
-                        )}
-                      />
-                    )}
-                  </div>
-                  <button className="cta1-whitebg">Book online</button>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Our Services Section */}
-      <section className="bg-white py-8 text-primary">
+      <section className="bg-white py-8 bg-primary">
         <div className="container mx-auto text-center">
           <h2 className="text-5xl font-bold mb-6">Our Services</h2>
           <p className="text-xl mb-6 text-center">
