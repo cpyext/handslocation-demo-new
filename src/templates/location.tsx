@@ -168,27 +168,32 @@ const Location: Template<TemplateRenderProps> = ({
             </div>
 
             {/* Right Section - Location Details */}
+            <div className="flex justify-center">
             <div>
-              <h1 className="text-3xl font-bold text-gray-800 mb-4">Hand & Stone - Chesterfield, VA</h1>
-              <p className="text-lg text-gray-600 mb-2">Call us: <span className="font-semibold text-[#043b76]">(804) 639-1113</span></p>
+              
+              <h1 className="text-3xl flex justify-center font-bold text-gray-800 mb-4">Hand & Stone - Chesterfield, VA</h1>
+              <p className="text-lg flex justify-center text-gray-600 mb-2">Call us: <span className="font-semibold text-[#043b76]">(804) 639-1113</span></p>
               <p className="text-lg text-gray-600 mb-4">Find us: <span className="font-semibold text-[#043b76]">7204 Hancock Village Drive, Chesterfield, VA 23832</span></p>
 
-              <div className="flex flex-col space-y-4 mb-4">
+              <div className="flex justify-center">            
+<div className="flex flex-col space-y-2 mb-2">
                 <a
                   href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                  className="text-white text-lg px-6 py-3 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
+                  className="text-white text-lg px-4 py-2 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center w-64">
                   Book an Appointment
                 </a>
                 <a
                   href="https://handandstone.com/locations/chesterfield/spa-menu/"
-                  className="text-white text-lg px-6 py-3 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
+                  className="text-white text-lg px-4 py-2 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center w-64">
                   View Spa Menu
                 </a>
                 <a
                   href="https://handandstone.com/gift-cards?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                  className="text-white text-lg px-6 py-3 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
+                  className="text-white text-lg px-4 py-2 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center w-64">
                   Buy a Gift Card
                 </a>
+              </div>
+              </div>
               </div>
 
               {/* Google Maps Section */}
@@ -226,8 +231,8 @@ const Location: Template<TemplateRenderProps> = ({
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
     {/* Review Submission Form */}
-    <div className="bg-[#f7f9fc] border border-[#d1d5db] shadow-md rounded-lg p-6">
-      <h2 className="text-xl font-bold mb-2">Submit a Review</h2>
+    <div className="bg-[#f7f9fc] border border-[#043b76] shadow-md rounded-lg p-6">
+      <h2 className="text-xl flex justify-center font-bold mb-2">Submit a Review</h2>
 
       {/* Name Field */}
       <div className="mb-4">
@@ -295,8 +300,8 @@ const Location: Template<TemplateRenderProps> = ({
     </div>
 
     {/* Reviews Section */}
-    <div className="bg-[#e2e8f0] border border-[#cbd5e1] shadow-md rounded-lg p-6">
-      <h2 className="text-xl font-bold mb-4">Customer Reviews</h2>
+    <div className="bg-[#f2f4f6] border border-[#043b76] shadow-md rounded-lg p-6">
+      <h2 className="text-xl flex justify-center font-bold mb-4">Customer Reviews</h2>
 
       {/* Review 1 */}
       <div className="border-b border-gray-300 pb-4 mb-4">
@@ -334,11 +339,19 @@ const Location: Template<TemplateRenderProps> = ({
         <p className="text-gray-700">
           Amelia is an amazing massage therapist. I highly recommend her. I really like the stretching she does during the massage. I feel so relaxed after each visit. The receptionists are always friendly and helpful with filling out forms and scheduling new appointments. I enjoy the member program; it is really beneficial. I just hate how over the last few years the price has increased so much. When I started it was $49.95, now it's up to $79.95.
         </p>
+         {/* Response from Hand and Stone Massage */}
+  <div className="mt-4 p-4 border border-gray-300 rounded bg-gray-100">
+    <h4 className="font-semibold text-gray-800">Response from Hand & Stone Massage:</h4>
+    <p className="text-gray-700">
+      Thank you for your feedback, Steph! We’re thrilled to hear that you enjoyed your massage and that our staff made your experience pleasant. We strive to provide the best service possible, and your comments about the price increase have been noted. We hope to see you again soon!
+    </p>
+  </div>
+</div>
       </div>
     </div>
 
   </div>
-</div>
+
 
 
 
@@ -669,7 +682,7 @@ const Location: Template<TemplateRenderProps> = ({
       </section>
 
 
-      <bottom className="bg-[#043b76] py-12">
+      <footer className="bg-[#FFFFFF] py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
@@ -721,7 +734,7 @@ const Location: Template<TemplateRenderProps> = ({
             </div>
           </div>
         </div>
-      </bottom>
+      </footer>
 
 
 
