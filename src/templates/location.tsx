@@ -11,13 +11,20 @@ import { Image, LexicalRichText } from "@yext/pages-components";
 import Hours from "../components/hours";
 import {
   BsFacebook,
+  BsFileMinus,
   BsInstagram,
   BsLinkedin,
+  BsPlus,
   BsTiktok,
   BsTwitter,
   BsYoutube,
 } from "react-icons/bs";
 import Cta from "../components/cta";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -57,6 +64,11 @@ export const config: TemplateConfig = {
       "c_relatedPromotions.c_category",
       "c_relatedPromotions.c_primaryCTA",
       "c_relatedPromotions.c_secondaryCTA",
+      "c_relatedFAQs.id",
+      "c_relatedFAQs.question",
+      "c_relatedFAQs.answerV2",
+      "c_relatedFAQs.c_primaryCTA",
+
       // "c_ourServices",
     ],
     // Defines the scope of entities that qualify for this stream.
@@ -147,6 +159,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
     c_tertiaryCTA,
     photoGallery,
     c_relatedServices,
+    c_relatedFAQs,
   } = document;
 
   return (
@@ -394,6 +407,50 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
           </div>
         );
       })}
+
+      {/* FAQs Section */}
+      {c_relatedFAQs && (
+        <div className="bg-white text-primary">
+          <div className="mx-auto px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+            <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
+              <div className="mx-auto sm:text-center">
+                <h2 className="text-6xl font-semibold leading-7 font-playFair">
+                  FAQs
+                </h2>
+              </div>
+              <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
+                {c_relatedFAQs.map((faq) => (
+                  <Disclosure key={faq.question} as="div" className="pt-6">
+                    <dt>
+                      <DisclosureButton className="text-2xl group flex w-full items-start justify-between text-left">
+                        <span className="font-semibold leading-7">
+                          {faq.question}
+                        </span>
+                        <span className="ml-6 flex h-7 items-center">
+                          <BsPlus
+                            aria-hidden="true"
+                            className="h-8 w-8 group-data-[open]:hidden"
+                          />
+                          <BsFileMinus
+                            aria-hidden="true"
+                            className="h-8 w-8 [.group:not([data-open])_&]:hidden"
+                          />
+                        </span>
+                      </DisclosureButton>
+                    </dt>
+                    <DisclosurePanel as="dd" className="mt-2 pr-12 text-xl">
+                      <LexicalRichText
+                        serializedAST={JSON.stringify(faq.answerV2.json)}
+                      />
+                      <Cta cta={faq.c_primaryCTA} className="cta1-whitebg" />
+                    </DisclosurePanel>
+                  </Disclosure>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </div>
+      )}
       <footer className="bg-gray-900 text-white p-6">
         <div className="container mx-auto text-center">
           <p className="text-sm">
