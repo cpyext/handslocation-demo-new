@@ -412,7 +412,7 @@ const Location: Template<TemplateRenderProps> = ({
               {/* FAQ 3 */}
               <div className="border border-gray-300 rounded-lg">
                 <div className="p-4 cursor-pointer" style={{ color: '#000000' }}>
-                  <h3 className="text-lg font-bold">What are the age restrictions?          </h3>
+                  <h3 className="text-lg font-bold">What are the age restrictions?</h3>
                 </div>
                 <div className="px-4 pb-4 hidden">
                   <p className="text-base" style={{ color: '#000000' }}>
