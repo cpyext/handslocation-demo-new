@@ -167,7 +167,7 @@ const Location: Template<TemplateRenderProps> = ({
               />
             </div>
 
-            {/* Right Section - Location Details */}
+            {/* Right Section - Location Detils */}
             <div className="flex justify-center">
               <div>
 
