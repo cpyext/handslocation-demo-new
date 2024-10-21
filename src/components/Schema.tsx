@@ -1,7 +1,5 @@
-
 import { JsonLd } from "react-schemaorg";
-import { ClothingStore, FAQPage, Place, ItemList } from "schema-dts";
-import Product from "../types/products";
+import { Place, ItemList, LocalBusiness, FAQPage } from "schema-dts";
 const Schema = (props: any) => {
   const { document } = props;
   const name = `${document.name} in ${document.address.city}, ${document.address.region}`;
@@ -11,13 +9,13 @@ const Schema = (props: any) => {
   const faqsList: any = [];
   const productsList: any = [];
   const itemListElement: any = [];
-  if (document.services) {
-    document.services.forEach((item: any) => {
+  if (document.c_relatedOffers) {
+    document.c_relatedOffers.forEach((item: any) => {
       itemListElement.push({
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: `${item}`,
+          name: `${item.name}`,
         },
       });
     });
@@ -54,14 +52,26 @@ const Schema = (props: any) => {
       });
     });
   }
-  console.log(JSON.stringify(productsList));
+
+  if (document.c_relatedFAQs) {
+    document.c_relatedFAQs.map((item) =>
+      faqsList.push({
+        "@type": item.question,
+        name: "Q3",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answerV2,
+        },
+      })
+    );
+  }
 
   return (
     <>
-      <JsonLd<ClothingStore>
+      <JsonLd<LocalBusiness>
         item={{
           "@context": "https://schema.org",
-          "@type": "ClothingStore",
+          "@type": "LocalBusiness",
           name,
           address: {
             "@type": "PostalAddress",
@@ -90,13 +100,13 @@ const Schema = (props: any) => {
           itemListElement: productsList,
         }}
       />
-      {/*  <JsonLd<FAQPage>
+      <JsonLd<FAQPage>
         item={{
           "@context": "https://schema.org",
           "@type": "FAQPage",
           mainEntity: faqsList,
         }}
-      /> */}
+      />
 
       {document.geocodedCoordinate && (
         <JsonLd<Place>

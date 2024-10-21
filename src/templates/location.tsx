@@ -27,6 +27,7 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
+import Schema from "../components/Schema";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -145,7 +146,7 @@ export const getHeadConfig: GetHeadConfig = ({
  * them in the src/templates folder as this is specific for true template files).
  */
 const Location: Template = ({ relativePrefixToRoot, path, document }) => {
-  console.log(JSON.stringify(document));
+  const _data = document;
   const {
     _site,
     name,
@@ -218,6 +219,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
 
   return (
     <>
+      <Schema document={_data} />
       {/* Top Account Bar */}
       <nav aria-label="Account" className="bg-[#043b76] text-white py-3">
         <div className="container mx-auto flex justify-end">
@@ -360,11 +362,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
             </div>
           </div>
           <div className="relative lg:-mr-8 xl:absolute xl:inset-0 w-1/2">
-            <Image
-              image={photoGallery[0]}
-              className="!h-full"
-              alt="Spa Image"
-            />
+            <Image image={photoGallery[0]} className="!h-full" />
           </div>
         </div>
       </section>
