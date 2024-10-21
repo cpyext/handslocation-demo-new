@@ -222,6 +222,142 @@ const Location: Template<TemplateRenderProps> = ({
 
 
 
+      <div className="container mx-auto px-4 py-8">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    {/* Review Submission Form */}
+    <div className="bg-[#f7f9fc] border border-[#d1d5db] shadow-md rounded-lg p-6">
+      <h2 className="text-xl font-bold mb-2">Submit a Review</h2>
+
+      {/* Name Field */}
+      <div className="mb-4">
+        <label className="block text-gray-700 font-semibold mb-1" htmlFor="name">Name:</label>
+        <input 
+          type="text" 
+          id="name" 
+          className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Your Name"
+        />
+      </div>
+
+      {/* Number of Reviews */}
+      <div className="mb-4">
+        <label className="block text-gray-700 font-semibold mb-1" htmlFor="number-of-reviews">Number of Reviews:</label>
+        <input 
+          type="number" 
+          id="number-of-reviews" 
+          className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Total Reviews"
+        />
+      </div>
+
+      {/* Star Rating */}
+      <div className="mb-4">
+        <label className="block text-gray-700 font-semibold mb-1">Star Rating:</label>
+        <div className="flex">
+          {[1, 2, 3, 4, 5].map((star) => (
+            <svg 
+              key={star} 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="currentColor" 
+              viewBox="0 0 24 24" 
+              className="w-6 h-6 text-yellow-500 cursor-pointer"
+            >
+              <path d="M12 .587l3.668 7.431 8.247 1.213-5.951 5.811 1.405 8.215L12 18.896l-7.369 3.866 1.405-8.215-5.951-5.811 8.247-1.213z" />
+            </svg>
+          ))}
+        </div>
+      </div>
+
+      {/* Review Content */}
+      <div className="mb-4">
+        <label className="block text-gray-700 font-semibold mb-1" htmlFor="review-content">Review Content:</label>
+        <textarea 
+          id="review-content" 
+          className="border border-gray-300 rounded-md px-4 py-2 w-full h-24 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Write your review here"
+        />
+      </div>
+
+      {/* Date Posted */}
+      <div className="mb-4">
+        <label className="block text-gray-700 font-semibold mb-1" htmlFor="date-posted">Date Posted:</label>
+        <input 
+          type="date" 
+          id="date-posted" 
+          className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <button className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
+        Submit Review
+      </button>
+    </div>
+
+    {/* Reviews Section */}
+    <div className="bg-[#e2e8f0] border border-[#cbd5e1] shadow-md rounded-lg p-6">
+      <h2 className="text-xl font-bold mb-4">Customer Reviews</h2>
+
+      {/* Review 1 */}
+      <div className="border-b border-gray-300 pb-4 mb-4">
+        <div className="flex items-center mb-2">
+          <img 
+            src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg" 
+            alt="Neal Tom" 
+            className="w-16 h-16 rounded-full object-cover mr-2" 
+          />
+          <div>
+            <h3 className="font-semibold text-gray-800">Neal Tom</h3>
+            <p className="text-gray-600">4 ⭐ ⭐ ⭐ ⭐ | 10 Reviews</p>
+            <p className="text-gray-500 text-sm">Posted on: 02 October 2024</p>
+          </div>
+        </div>
+        <p className="text-gray-700">
+          This was my first time visiting and it was a very good experience. A really good and relaxed environment. I got a deep tissue massage and it was exactly what I needed! I'm looking forward to my next visit!
+        </p>
+      </div>
+
+      {/* Review 2 */}
+      <div className="border-b border-gray-300 pb-4 mb-4">
+        <div className="flex items-center mb-2">
+        <img 
+  src="https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg?auto=compress&cs=tinysrgb&w=800" 
+  alt="Steph Spied" 
+  className="w-16 h-16 rounded-full object-cover mr-2" 
+/>
+          <div>
+            <h3 className="font-semibold text-gray-800">Steph Spied</h3>
+            <p className="text-gray-600">5 ⭐ ⭐ ⭐ ⭐ ⭐ | 63 Reviews</p>
+            <p className="text-gray-500 text-sm">Posted on: 01 September 2024</p>
+          </div>
+        </div>
+        <p className="text-gray-700">
+          Amelia is an amazing massage therapist. I highly recommend her. I really like the stretching she does during the massage. I feel so relaxed after each visit. The receptionists are always friendly and helpful with filling out forms and scheduling new appointments. I enjoy the member program; it is really beneficial. I just hate how over the last few years the price has increased so much. When I started it was $49.95, now it's up to $79.95.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Introductory Offers Section */}
       <section className="bg-blue-100 py-8">
