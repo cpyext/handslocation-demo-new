@@ -305,11 +305,13 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
                   Book an Appointment
                 </a>
               </li>
+              <li>
+                <BsSearch
+                  className="!inline w-6 h-6 ml-6 font-semibold"
+                  aria-label="Search Icon"
+                />
+              </li>
             </ul>
-            <BsSearch
-              className="!inline w-6 h-6 ml-6 font-semibold"
-              aria-label="Search Icon"
-            />
           </nav>
         </div>
       </header>
