@@ -9,6 +9,18 @@ const Schema = (props: any) => {
   const faqsList: any = [];
   const productsList: any = [];
   const itemListElement: any = [];
+  const servicesOffered: any = [];
+  if (document.c_relatedServices) {
+    document.c_relatedServices.forEach((item: any) => {
+      servicesOffered.push({
+        "@type": "OfferCatalog",
+        itemOffered: {
+          "@type": "Service",
+          name: `${item.name}`,
+        },
+      });
+    });
+  }
   if (document.c_relatedOffers) {
     document.c_relatedOffers.forEach((item: any) => {
       itemListElement.push({
@@ -89,8 +101,26 @@ const Schema = (props: any) => {
           hasOfferCatalog: {
             "@type": "OfferCatalog",
             name: "Store services",
-            itemListElement: itemListElement,
+            itemListElement: servicesOffered,
           },
+          offers: [
+            {
+              "@type": "Offer",
+              name: "Intro Image Classic Facial",
+              price: "79.95",
+              priceCurrency: "USD",
+              url: "https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8",
+              description: `Introductory pricing for first-time customers only. 
+                Service includes time for dressing and consultation.`,
+            },
+            {
+              "@type": "Offer",
+              name: "Introductory Swedish Massage 1 Hour",
+              price: "79.95",
+              priceCurrency: "USD",
+              url: "https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8",
+            },
+          ],
         }}
       />
       <JsonLd<ItemList>
