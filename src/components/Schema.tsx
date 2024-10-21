@@ -35,7 +35,7 @@ const Schema = (props: any) => {
   if (document.c_relatedFAQs) {
     document.c_relatedFAQs.map((item) =>
       faqsList.push({
-        "@type": item.question,
+        "@type": "Question",
         name: "Q3",
         acceptedAnswer: {
           "@type": "Answer",

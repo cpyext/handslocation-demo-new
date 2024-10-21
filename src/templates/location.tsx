@@ -51,6 +51,7 @@ export const config: TemplateConfig = {
       "c_primaryCTA",
       "c_secondaryCTA",
       "c_tertiaryCTA",
+      "geocodedCoordinate",
       "c_relatedOffers.name",
       "c_relatedOffers.shortDescriptionV2",
       "c_relatedOffers.c_primaryCTA",
@@ -165,6 +166,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
     c_relatedServices,
     c_relatedFAQs,
   } = document;
+  console.log(geocodedCoordinate);
 
   const reviews = [
     {
