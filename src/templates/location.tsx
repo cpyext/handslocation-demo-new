@@ -15,6 +15,7 @@ import {
   BsInstagram,
   BsLinkedin,
   BsPlus,
+  BsSearch,
   BsStarFill,
   BsTiktok,
   BsTwitter,
@@ -225,8 +226,8 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
           </a>
         </div>
       </div>
-      <header className="bg-white-900 text-blue p-6">
-        <div className="container mx-auto flex justify-between items-center">
+      <header className="bg-white-900 text-primary p-6 font-semibold">
+        <div className="mx-auto flex justify-between items-center">
           <a href="#">
             <img
               src="https://handandstone.com/wp-content/uploads/2022/11/HS_Logo.png"
@@ -236,29 +237,48 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
           </a>
           <nav>
             <a
-              href="https://handandstone.com/locations/"
-              className="text-lg mx-4 hover:underline"
-            >
-              Locations
-            </a>
-            <a
               href="https://handandstone.com/massage/swedish-massage/"
-              className="text-lg mx-4 hover:underline"
+              className="text-xl mx-4 hover:underline"
             >
               Spa Services
             </a>
             <a
+              href="https://handandstone.com/locations/"
+              className="text-xl mx-4 hover:underline"
+            >
+              Locations
+            </a>
+            <a
               href="https://handandstone.com/memberships/"
-              className="text-lg mx-4 hover:underline"
+              className="text-xl mx-4 hover:underline"
             >
               Membership
             </a>
             <a
+              href="https://handandstone.com/memberships/"
+              className="text-xl mx-4 hover:underline"
+            >
+              Gift Cards
+            </a>
+            <a
+              href="https://handandstone.com/memberships/"
+              className="text-xl mx-4 hover:underline"
+            >
+              Careers
+            </a>
+            <a
+              href="https://handandstone.com/memberships/"
+              className="text-xl mx-4 hover:underline"
+            >
+              Own a Franchise
+            </a>
+            <a
               href="https://handandstone.com/book-an-appointment/"
-              className="text-lg mx-4 hover:underline"
+              className="text-xl cta2-primarybg hover:underline !inline !font-semibold"
             >
               Book an Appointment
             </a>
+            <BsSearch className="!inline  w-6 h-6 ml-6 font-semibold" />
           </nav>
         </div>
       </header>
@@ -289,15 +309,14 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
                 <span className="font-bold">Find us: </span> {address.line1},{" "}
                 {address.city}, {address.region} {address.postalCode}
               </p>
-              <div className="mt-10 flex flex-col items-center gap-x-6">
-                <div className="flex gap-4 mb-4 items-center">
+              <div className="mt-10 flex flex-col items-start gap-x-6 h-full justify-between">
+                <div className="flex gap-4 mb-4 items-start">
                   <Cta cta={c_primaryCTA} className="cta1-primarybg " />
                   <Cta cta={c_secondaryCTA} className="cta1-primarybg " />
                   <Cta cta={c_tertiaryCTA} className="cta1-primarybg " />
                 </div>
 
-                {/* Google Maps Section */}
-                <div className="flex gap-8 mt-24">
+                <div className="flex gap-8 mb-4">
                   <BsFacebook className="h-8 w-8" />
                   <BsTwitter className="h-8 w-8" />
                   <BsInstagram className="h-8 w-8" />
