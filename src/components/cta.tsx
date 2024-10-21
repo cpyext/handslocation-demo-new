@@ -6,7 +6,7 @@ type CtaProps = {
 type CTA = {
   label: string;
   link: string;
-  linkType: string;
+  linkType?: string;
 };
 
 const Cta = ({ cta, className }: CtaProps) => {

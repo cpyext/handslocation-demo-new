@@ -15,7 +15,7 @@ import {
   BsInstagram,
   BsLinkedin,
   BsPlus,
-  BsStar,
+  BsStarFill,
   BsTiktok,
   BsTwitter,
   BsYoutube,
@@ -315,7 +315,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
       </div>
 
       {/* Welcome Section */}
-      <section className="container mx-auto p-6 flex justify-between gap-28 text-primary">
+      <section className="mx-auto p-12 gap-28 flex justify-between w-full text-primary py-16">
         <div className="w-1/2">
           <h2 className="text-5xl font-bold mb-6">
             <span className="text-3xl">Welcome</span>
@@ -330,14 +330,32 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
         <div className="flex flex-col gap-4 w-1/2">
           <Hours hours={hours} title="Hours" />
           <p className="text-3xl">Book an appointment</p>
-          <button className="cta1-whitebg">Call {mainPhone}</button>
-          <button className="cta1-whitebg">Book online</button>
+          <Cta
+            cta={{
+              label: `Call ${mainPhone
+                .replace("+1", "")
+                .replace(/\D+/g, "")
+                .replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")}`,
+              link: `tel:${mainPhone}`,
+            }}
+            className="cta1-whitebg !w-full"
+          ></Cta>
+          <Cta
+            cta={{ label: "Book online", link: c_primaryCTA.link }}
+            className="cta1-whitebg !w-full"
+          ></Cta>
           <p className="text-3xl">Find us</p>
-          <button className="cta2-whitebg">Get Directions</button>
+          <Cta
+            cta={{
+              label: "Buy a Gift Card",
+              link: "https://www.google.com/maps/place/7204+Hancock+Village+Drive,+Chesterfield,+VA+23832",
+            }}
+            className="cta2-whitebg !w-full"
+          ></Cta>
         </div>
       </section>
       {/* Introductury offers */}
-      <div className="bg-white py-24 sm:py-32">
+      <div className="bg-white py-16">
         <div className="mx-auto px-6 lg:px-8 text-primary">
           <div className="mx-auto sm:text-center">
             <h2 className="text-6xl font-semibold leading-7 font-playFair">
@@ -379,7 +397,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
       </div>
       {/* Services */}
       {c_relatedServices && (
-        <div className="bg-white py-24 sm:py-32">
+        <div className="bg-white py-16">
           <div className="mx-auto px-6 lg:px-8 text-primary">
             <div className="mx-auto sm:text-center">
               <h2 className="text-6xl font-semibold leading-7 font-playFair">
@@ -462,7 +480,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
       {/* FAQs Section */}
       {c_relatedFAQs && (
         <div className="bg-white text-primary">
-          <div className="mx-auto px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+          <div className="mx-auto px-6 lg:px-8 py-16">
             <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
               <div className="mx-auto sm:text-center">
                 <h2 className="text-6xl font-semibold leading-7 font-playFair">
@@ -504,13 +522,13 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
       )}
       {/* Reviews */}
       <div className="bg-white text-primary">
-        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
           <div className="mx-auto sm:text-center">
             <h2 className="text-6xl font-semibold leading-7 font-playFair">
               Reviews
             </h2>
           </div>{" "}
-          <div className="mt-6 space-y-10 divide-y divide-gray-200 border-b border-t border-gray-200 pb-10">
+          <div className="mt-24 space-y-10 divide-y divide-gray-200 border-b border-t border-gray-200 pb-10">
             {reviews.map((review) => (
               <div
                 key={review.id}
@@ -520,34 +538,34 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
                   <div className="flex items-center xl:col-span-1">
                     <div className="flex items-center">
                       {[0, 1, 2, 3, 4].map((rating) => (
-                        <BsStar
+                        <BsStarFill
                           key={rating}
                           aria-hidden="true"
                           className={
                             review.rating > rating
-                              ? "text-yellow-400 h-5 w-5 flex-shrink-0"
-                              : "text-gray-200 h-5 w-5 flex-shrink-0"
+                              ? "fill-primary h-5 w-5 flex-shrink-0"
+                              : "fill-gray-200 h-5 w-5 flex-shrink-0"
                           }
                         />
                       ))}
                     </div>
-                    <p className="ml-3 text-sm">
+                    <p className="ml-3">
                       {review.rating}
                       <span className="sr-only"> out of 5 stars</span>
                     </p>
                   </div>
 
                   <div className="mt-4 lg:mt-6 xl:col-span-2 xl:mt-0">
-                    <h3 className="text-sm font-medium ">{review.title}</h3>
+                    <h3 className="font-medium ">{review.title}</h3>
 
                     <div
                       dangerouslySetInnerHTML={{ __html: review.content }}
-                      className="mt-3 space-y-6 text-sm "
+                      className="mt-3 space-y-6 "
                     />
                   </div>
                 </div>
 
-                <div className="mt-6 flex items-center text-sm lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:mt-0 lg:flex-col lg:items-start xl:col-span-3">
+                <div className="mt-6 flex items-center lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:mt-0 lg:flex-col lg:items-start xl:col-span-3">
                   <p className="font-medium ">{review.author}</p>
                   <time
                     dateTime={review.datetime}
@@ -561,10 +579,14 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
           </div>
         </div>
       </div>
-      <footer className="bg-gray-900 text-white p-6">
-        <div className="container mx-auto text-center">
-          <p className="text-sm">
-            © 2024 Hand & Stone Massage and Facial Spa. All Rights Reserved.
+      <footer className="text-primary bg-white py-16">
+        <div className="  mx-auto text-center">
+          <p>
+            © *Introductory offers valid for first time visit only. Not valid
+            for gift cards. Sessions include time for consultation and dressing.
+            Rates and services may vary by location.
+            <br /> **Enhancements are included within the one-hour service.
+            ***Offers may not be combined. See spa for details.
           </p>
         </div>
       </footer>
