@@ -169,31 +169,31 @@ const Location: Template<TemplateRenderProps> = ({
 
             {/* Right Section - Location Details */}
             <div className="flex justify-center">
-            <div>
-              
-              <h1 className="text-3xl flex justify-center font-bold text-gray-800 mb-4">Hand & Stone - Chesterfield, VA</h1>
-              <p className="text-lg flex justify-center text-gray-600 mb-2">Call us: <span className="font-semibold text-[#043b76]">(804) 639-1113</span></p>
-              <p className="text-lg text-gray-600 mb-4">Find us: <span className="font-semibold text-[#043b76]">7204 Hancock Village Drive, Chesterfield, VA 23832</span></p>
+              <div>
 
-              <div className="flex justify-center">            
-<div className="flex flex-col space-y-2 mb-2">
-                <a
-                  href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                  className="text-white text-lg px-4 py-2 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center w-64">
-                  Book an Appointment
-                </a>
-                <a
-                  href="https://handandstone.com/locations/chesterfield/spa-menu/"
-                  className="text-white text-lg px-4 py-2 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center w-64">
-                  View Spa Menu
-                </a>
-                <a
-                  href="https://handandstone.com/gift-cards?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                  className="text-white text-lg px-4 py-2 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center w-64">
-                  Buy a Gift Card
-                </a>
-              </div>
-              </div>
+                <h1 className="text-3xl flex justify-center font-bold text-gray-800 mb-4">Hand & Stone - Chesterfield, VA</h1>
+                <p className="text-lg flex justify-center text-gray-600 mb-2">Call us: <span className="font-semibold text-[#043b76]">(804) 639-1113</span></p>
+                <p className="text-lg text-gray-600 mb-4">Find us: <span className="font-semibold text-[#043b76]">7204 Hancock Village Drive, Chesterfield, VA 23832</span></p>
+
+                <div className="flex justify-center">
+                  <div className="flex flex-col space-y-2 mb-4">
+                    <a
+                      href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
+                      className="text-white text-lg px-4 py-2 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center w-64">
+                      Book an Appointment
+                    </a>
+                    <a
+                      href="https://handandstone.com/locations/chesterfield/spa-menu/"
+                      className="text-white text-lg px-4 py-2 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center w-64">
+                      View Spa Menu
+                    </a>
+                    <a
+                      href="https://handandstone.com/gift-cards?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
+                      className="text-white text-lg px-4 py-2 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center w-64">
+                      Buy a Gift Card
+                    </a>
+                  </div>
+                </div>
               </div>
 
               {/* Google Maps Section */}
@@ -228,129 +228,129 @@ const Location: Template<TemplateRenderProps> = ({
 
 
       <div className="container mx-auto px-4 py-8">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-    {/* Review Submission Form */}
-    <div className="bg-[#f7f9fc] border border-[#043b76] shadow-md rounded-lg p-6">
-      <h2 className="text-xl flex justify-center font-bold mb-2">Submit a Review</h2>
+          {/* Review Submission Form */}
+          <div className="bg-[#f7f9fc] border border-[#043b76] shadow-md rounded-lg p-6">
+            <h2 className="text-xl flex justify-center font-bold mb-2">Submit a Review</h2>
 
-      {/* Name Field */}
-      <div className="mb-4">
-        <label className="block text-gray-700 font-semibold mb-1" htmlFor="name">Name:</label>
-        <input 
-          type="text" 
-          id="name" 
-          className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="Your Name"
-        />
-      </div>
+            {/* Name Field */}
+            <div className="mb-4">
+              <label className="block text-gray-700 font-semibold mb-1" htmlFor="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Your Name"
+              />
+            </div>
 
-      {/* Number of Reviews */}
-      <div className="mb-4">
-        <label className="block text-gray-700 font-semibold mb-1" htmlFor="number-of-reviews">Number of Reviews:</label>
-        <input 
-          type="number" 
-          id="number-of-reviews" 
-          className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="Total Reviews"
-        />
-      </div>
+            {/* Number of Reviews */}
+            <div className="mb-4">
+              <label className="block text-gray-700 font-semibold mb-1" htmlFor="number-of-reviews">Number of Reviews:</label>
+              <input
+                type="number"
+                id="number-of-reviews"
+                className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Total Reviews"
+              />
+            </div>
 
-      {/* Star Rating */}
-      <div className="mb-4">
-        <label className="block text-gray-700 font-semibold mb-1">Star Rating:</label>
-        <div className="flex">
-          {[1, 2, 3, 4, 5].map((star) => (
-            <svg 
-              key={star} 
-              xmlns="http://www.w3.org/2000/svg" 
-              fill="currentColor" 
-              viewBox="0 0 24 24" 
-              className="w-6 h-6 text-yellow-500 cursor-pointer"
-            >
-              <path d="M12 .587l3.668 7.431 8.247 1.213-5.951 5.811 1.405 8.215L12 18.896l-7.369 3.866 1.405-8.215-5.951-5.811 8.247-1.213z" />
-            </svg>
-          ))}
-        </div>
-      </div>
+            {/* Star Rating */}
+            <div className="mb-4">
+              <label className="block text-gray-700 font-semibold mb-1">Star Rating:</label>
+              <div className="flex">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg
+                    key={star}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    className="w-6 h-6 text-yellow-500 cursor-pointer"
+                  >
+                    <path d="M12 .587l3.668 7.431 8.247 1.213-5.951 5.811 1.405 8.215L12 18.896l-7.369 3.866 1.405-8.215-5.951-5.811 8.247-1.213z" />
+                  </svg>
+                ))}
+              </div>
+            </div>
 
-      {/* Review Content */}
-      <div className="mb-4">
-        <label className="block text-gray-700 font-semibold mb-1" htmlFor="review-content">Review Content:</label>
-        <textarea 
-          id="review-content" 
-          className="border border-gray-300 rounded-md px-4 py-2 w-full h-24 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="Write your review here"
-        />
-      </div>
+            {/* Review Content */}
+            <div className="mb-4">
+              <label className="block text-gray-700 font-semibold mb-1" htmlFor="review-content">Review Content:</label>
+              <textarea
+                id="review-content"
+                className="border border-gray-300 rounded-md px-4 py-2 w-full h-24 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Write your review here"
+              />
+            </div>
 
-      {/* Date Posted */}
-      <div className="mb-4">
-        <label className="block text-gray-700 font-semibold mb-1" htmlFor="date-posted">Date Posted:</label>
-        <input 
-          type="date" 
-          id="date-posted" 
-          className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
+            {/* Date Posted */}
+            <div className="mb-4">
+              <label className="block text-gray-700 font-semibold mb-1" htmlFor="date-posted">Date Posted:</label>
+              <input
+                type="date"
+                id="date-posted"
+                className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
 
-      <button className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
-        Submit Review
-      </button>
-    </div>
+            <button className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
+              Submit Review
+            </button>
+          </div>
 
-    {/* Reviews Section */}
-    <div className="bg-[#f2f4f6] border border-[#043b76] shadow-md rounded-lg p-6">
-      <h2 className="text-xl flex justify-center font-bold mb-4">Customer Reviews</h2>
+          {/* Reviews Section */}
+          <div className="bg-[#f2f4f6] border border-[#043b76] shadow-md rounded-lg p-6">
+            <h2 className="text-xl flex justify-center font-bold mb-4">Customer Reviews</h2>
 
-      {/* Review 1 */}
-      <div className="border-b border-gray-300 pb-4 mb-4">
-        <div className="flex items-center mb-2">
-          <img 
-            src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg" 
-            alt="Neal Tom" 
-            className="w-16 h-16 rounded-full object-cover mr-2" 
-          />
-          <div>
-            <h3 className="font-semibold text-gray-800">Neal Tom</h3>
-            <p className="text-gray-600">4 ⭐ ⭐ ⭐ ⭐ | 10 Reviews</p>
-            <p className="text-gray-500 text-sm">Posted on: 02 October 2024</p>
+            {/* Review 1 */}
+            <div className="border-b border-gray-300 pb-4 mb-4">
+              <div className="flex items-center mb-2">
+                <img
+                  src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg"
+                  alt="Neal Tom"
+                  className="w-16 h-16 rounded-full object-cover mr-2"
+                />
+                <div>
+                  <h3 className="font-semibold text-gray-800">Neal Tom</h3>
+                  <p className="text-gray-600">4 ⭐ ⭐ ⭐ ⭐ | 10 Reviews</p>
+                  <p className="text-gray-500 text-sm">Posted on: 02 October 2024</p>
+                </div>
+              </div>
+              <p className="text-gray-700">
+                This was my first time visiting and it was a very good experience. A really good and relaxed environment. I got a deep tissue massage and it was exactly what I needed! I'm looking forward to my next visit!
+              </p>
+            </div>
+
+            {/* Review 2 */}
+            <div className="border-b border-gray-300 pb-4 mb-4">
+              <div className="flex items-center mb-2">
+                <img
+                  src="https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Steph Spied"
+                  className="w-16 h-16 rounded-full object-cover mr-2"
+                />
+                <div>
+                  <h3 className="font-semibold text-gray-800">Steph Spied</h3>
+                  <p className="text-gray-600">5 ⭐ ⭐ ⭐ ⭐ ⭐ | 63 Reviews</p>
+                  <p className="text-gray-500 text-sm">Posted on: 01 September 2024</p>
+                </div>
+              </div>
+              <p className="text-gray-700">
+                Amelia is an amazing massage therapist. I highly recommend her. I really like the stretching she does during the massage. I feel so relaxed after each visit. The receptionists are always friendly and helpful with filling out forms and scheduling new appointments. I enjoy the member program; it is really beneficial. I just hate how over the last few years the price has increased so much. When I started it was $49.95, now it's up to $79.95.
+              </p>
+              {/* Response from Hand and Stone Massage */}
+              <div className="mt-4 p-4 border border-gray-300 rounded bg-gray-100">
+                <h4 className="font-semibold text-gray-800">Response from Hand & Stone Massage:</h4>
+                <p className="text-gray-700">
+                  Thank you for your feedback, Steph! We’re thrilled to hear that you enjoyed your massage and that our staff made your experience pleasant. We strive to provide the best service possible, and your comments about the price increase have been noted. We hope to see you again soon!
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <p className="text-gray-700">
-          This was my first time visiting and it was a very good experience. A really good and relaxed environment. I got a deep tissue massage and it was exactly what I needed! I'm looking forward to my next visit!
-        </p>
-      </div>
 
-      {/* Review 2 */}
-      <div className="border-b border-gray-300 pb-4 mb-4">
-        <div className="flex items-center mb-2">
-        <img 
-  src="https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg?auto=compress&cs=tinysrgb&w=800" 
-  alt="Steph Spied" 
-  className="w-16 h-16 rounded-full object-cover mr-2" 
-/>
-          <div>
-            <h3 className="font-semibold text-gray-800">Steph Spied</h3>
-            <p className="text-gray-600">5 ⭐ ⭐ ⭐ ⭐ ⭐ | 63 Reviews</p>
-            <p className="text-gray-500 text-sm">Posted on: 01 September 2024</p>
-          </div>
-        </div>
-        <p className="text-gray-700">
-          Amelia is an amazing massage therapist. I highly recommend her. I really like the stretching she does during the massage. I feel so relaxed after each visit. The receptionists are always friendly and helpful with filling out forms and scheduling new appointments. I enjoy the member program; it is really beneficial. I just hate how over the last few years the price has increased so much. When I started it was $49.95, now it's up to $79.95.
-        </p>
-         {/* Response from Hand and Stone Massage */}
-  <div className="mt-4 p-4 border border-gray-300 rounded bg-gray-100">
-    <h4 className="font-semibold text-gray-800">Response from Hand & Stone Massage:</h4>
-    <p className="text-gray-700">
-      Thank you for your feedback, Steph! We’re thrilled to hear that you enjoyed your massage and that our staff made your experience pleasant. We strive to provide the best service possible, and your comments about the price increase have been noted. We hope to see you again soon!
-    </p>
-  </div>
-</div>
       </div>
-    </div>
-
-  </div>
 
 
 
@@ -394,7 +394,7 @@ const Location: Template<TemplateRenderProps> = ({
               <a
                 href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
                 className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
-              
+
                 Book Now
               </a>
             </div>
@@ -403,7 +403,7 @@ const Location: Template<TemplateRenderProps> = ({
               <p className="mb-4">1-Hour Hot Stone Massage for only $79.95</p>
               <a
                 href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                
+
                 className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
                 Book Now
               </a>
@@ -460,7 +460,7 @@ const Location: Template<TemplateRenderProps> = ({
               <p className="mb-4">Purchase Hand & Stone Gift Cards conveniently online and send them directly to your loved ones.</p>
               <a
                 href="https://handandstone.zenoti.com/webstoreNew/giftcards/0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-               
+
                 className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
                 Buy Gift Cards
               </a>
@@ -470,7 +470,7 @@ const Location: Template<TemplateRenderProps> = ({
               <p className="mb-4">Visit our Chesterfield location to purchase gift cards and pick them up in person.</p>
               <a
                 href="https://handandstone.com/locations/"
-               
+
                 className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
                 Find a Location
               </a>
@@ -501,11 +501,11 @@ const Location: Template<TemplateRenderProps> = ({
             </div>
           </div>
           <a
-           className="mt-[1rem] text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
-           Join Now
-         </a>
-        
-          
+            className="mt-[1rem] text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
+            Join Now
+          </a>
+
+
         </div>
       </section>
 
@@ -642,13 +642,13 @@ const Location: Template<TemplateRenderProps> = ({
           <p className="text-lg text-gray-600 mb-8">
             Join our email list to receive special offers and updates!
           </p>
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center rounded mb-6">
             <input
               type="email"
               placeholder="Enter your email"
-              className="border border-[#043b76] rounded-l-md px-4 py-2 w-80 focus:outline-none focus:ring-2 focus:ring-[#043b76]"/>
+              className="border border-[#043b76] rounded-l-md px-4 py-2 w-80 focus:outline-none focus:ring-2 focus:ring-[#043b76]" />
 
-            <a href="https://handandstone.com/locations/chesterfield/"  className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">Sign up </a>
+            <a href="https://handandstone.com/locations/chesterfield/" className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">Sign up </a>
           </div>
           <p className="text-sm text-gray-500 mb-4">
             By signing up, you agree to receive emails from Hand & Stone.
