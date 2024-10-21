@@ -145,6 +145,7 @@ export const getHeadConfig: GetHeadConfig = ({
  * them in the src/templates folder as this is specific for true template files).
  */
 const Location: Template = ({ relativePrefixToRoot, path, document }) => {
+  console.log(JSON.stringify(document));
   const {
     _site,
     name,
@@ -163,6 +164,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
     c_relatedServices,
     c_relatedFAQs,
   } = document;
+
   const reviews = [
     {
       id: 1,
@@ -424,9 +426,9 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
           </div>
           <div className="mt-20 flow-root px-[8%]">
             <div className="grid grid-cols-3 gap-24 items-center">
-              {c_relatedOffers.map((offer) => (
-                <article key={offer.id} className="pt-16 lg:pt-0 text-center">
-                  <h3 id={offer.id} className="text-xl leading-7 font-sofiaPro">
+              {c_relatedOffers.map((offer, index) => (
+                <article key={index} className="pt-16 lg:pt-0 text-center">
+                  <h3 id={index} className="text-xl leading-7 font-sofiaPro">
                     {offer.name}
                   </h3>
                   <p className="mt-6 flex items-baseline justify-center gap-x-1">
@@ -436,7 +438,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
                     </span>
                   </p>
                   <hr className="border-t-2 my-8   border-t-primary" />
-                  <p className="leading-6 text-xl h-12 text-center">
+                  <div className="leading-6 text-xl h-12 text-center">
                     {offer.shortDescriptionV2 && (
                       <LexicalRichText
                         serializedAST={JSON.stringify(
@@ -444,7 +446,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
                         )}
                       />
                     )}
-                  </p>
+                  </div>
                   <Cta
                     cta={offer.c_primaryCTA}
                     className="cta1-whitebg mx-auto mt-8"
@@ -469,21 +471,21 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
               </h2>
             </div>
             <div className="px-[8%] mt-20 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-              {c_relatedServices.map((item) => (
-                <article key={item.id} className="group border rounded-md pb-4">
+              {c_relatedServices.map((item, index) => (
+                <article key={index} className="group border rounded-md pb-4">
                   <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-t-lg sm:aspect-h-3 sm:aspect-w-2">
                     <Image image={item.primaryPhoto} />
                   </div>
                   <div className="px-4 mt-4 flex items-center justify-between text-2xl font-medium">
                     <h3>{item.name}</h3>
                   </div>
-                  <p className="mt-1 text-xl px-4">
+                  <div className="mt-1 text-xl px-4">
                     <LexicalRichText
                       serializedAST={JSON.stringify(
                         item.richTextDescriptionV2.json
                       )}
                     />
-                  </p>
+                  </div>
                   <Cta
                     cta={item.c_primaryCTA}
                     className="cta1-whitebg mx-auto mt-8 px-4"
@@ -530,13 +532,13 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
 
                 {/* Short Description */}
                 {item.shortDescriptionV2 && (
-                  <p className="mt-6 text-lg leading-8">
+                  <div className="mt-6 text-lg leading-8">
                     <LexicalRichText
                       serializedAST={JSON.stringify(
                         item.shortDescriptionV2.json
                       )}
                     />
-                  </p>
+                  </div>
                 )}
 
                 {/* Call-to-action Button */}
@@ -583,8 +585,8 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
                 </h2>
               </div>
               <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
-                {c_relatedFAQs.map((faq) => (
-                  <Disclosure key={faq.question} as="div" className="pt-6">
+                {c_relatedFAQs.map((faq, index) => (
+                  <Disclosure key={index} as="div" className="pt-6">
                     <dt>
                       <DisclosureButton className="text-2xl group flex w-full items-start justify-between text-left">
                         <span className="font-semibold leading-7">
@@ -631,17 +633,17 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
             </h2>
           </div>
           <div className="mt-24 space-y-10 divide-y divide-gray-200 border-b border-t border-gray-200 pb-10">
-            {reviews.map((review) => (
+            {reviews.map((review, index) => (
               <article
-                key={review.id}
+                key={index}
                 className="pt-10 lg:grid lg:grid-cols-12 lg:gap-x-8"
               >
                 <div className="lg:col-span-8 lg:col-start-5 xl:col-span-9 xl:col-start-4 xl:grid xl:grid-cols-3 xl:items-start xl:gap-x-8">
                   <div className="flex items-center xl:col-span-1">
                     <div className="flex items-center">
-                      {[0, 1, 2, 3, 4].map((rating) => (
+                      {[0, 1, 2, 3, 4].map((rating, index) => (
                         <BsStarFill
-                          key={rating}
+                          key={index}
                           aria-hidden="true"
                           className={
                             review.rating > rating
