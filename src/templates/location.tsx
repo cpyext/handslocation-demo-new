@@ -224,7 +224,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
       <Schema document={_data} />
       {/* Top Account Bar */}
       <nav aria-label="Account" className="bg-[#043b76] text-white py-3">
-        <div className="container mx-auto flex justify-end">
+        <div className="w-full md:container mx-auto flex justify-end">
           <a
             href="#"
             className="text-sm font-semibold px-4 py-2 bg-[#043b76] hover:bg-blue-500 rounded"
@@ -239,7 +239,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
         className="bg-white text-primary p-6 font-semibold"
         aria-label="Main"
       >
-        <div className="mx-auto flex justify-between items-center">
+        <div className="mx-auto md:flex justify-between items-center hidden">
           <a href="#">
             <img
               src="https://handandstone.com/wp-content/uploads/2022/11/HS_Logo.png"
@@ -319,8 +319,8 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
         className="relative bg-primary text-white"
         aria-labelledby="hero-heading"
       >
-        <div className="mx-auto flex flex-row-reverse">
-          <div className="px-6 pb-24 pt-10 sm:pb-32 lg:px-0 lg:pb-56 lg:pt-48 w-1/2">
+        <div className="mx-auto flex flex-col-reverse md:flex-row-reverse">
+          <div className="px-6 pb-24 pt-10 sm:pb-32 lg:px-0 lg:pb-56 lg:pt-48 w-full md:w-1/2">
             <div className="mx-auto max-w-2xl ml-10">
               <div className="hidden sm:mt-32 sm:flex lg:mt-16">
                 <div className="relative px-3 py-1 text-xl leading-6">
@@ -347,7 +347,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
                 {address.region} {address.postalCode}
               </p>
               <div className="mt-10 flex flex-col items-start gap-x-6 h-full justify-between">
-                <div className="flex gap-4 mb-4 items-start">
+                <div className="flex flex-col md:flex-col gap-4 mb-4 items-start">
                   <Cta cta={c_primaryCTA} className="cta1-primarybg" />
                   <Cta cta={c_secondaryCTA} className="cta1-primarybg" />
                   <Cta cta={c_tertiaryCTA} className="cta1-primarybg" />
@@ -363,7 +363,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
               </div>
             </div>
           </div>
-          <div className="relative lg:-mr-8 xl:absolute xl:inset-0 w-1/2">
+          <div className="relative lg:-mr-8 xl:absolute xl:inset-0 w-full md:w-1/2">
             <Image image={photoGallery[0]} className="!h-full" />
           </div>
         </div>
@@ -371,10 +371,10 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
 
       {/* Welcome Section */}
       <section
-        className="mx-auto p-12 gap-28 flex justify-between w-full text-primary py-16"
+        className="mx-auto p-12 gap-28 flex flex-col md:flex-row justify-between w-full text-primary py-16"
         aria-labelledby="welcome-heading"
       >
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <h2 id="welcome-heading" className="text-5xl font-bold mb-6">
             <span className="text-3xl">Welcome</span>
             <br />
@@ -385,7 +385,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
           </h2>
           <p className="text-xl mb-4">{description}</p>
         </div>
-        <div className="flex flex-col gap-4 w-1/2">
+        <div className="flex flex-col gap-4 w-full md:w-1/2">
           <Hours hours={hours} title="Hours" />
           <p className="text-3xl">Book an appointment</p>
           <Cta
@@ -425,7 +425,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
             </h2>
           </div>
           <div className="mt-20 flow-root px-[8%]">
-            <div className="grid grid-cols-3 gap-24 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-24 items-center">
               {c_relatedOffers.map((offer, index) => (
                 <article key={index} className="pt-16 lg:pt-0 text-center">
                   <h3 id={index} className="text-xl leading-7 font-sofiaPro">
@@ -504,11 +504,11 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
           aria-labelledby={`promotion-heading-${item.id}`}
         >
           <div
-            className={`mx-auto flex w-full ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+            className={`mx-auto flex w-full ${index % 2 === 0 ? "flex-col-reverse md:flex-row " : "flex-col-reverse md:flex-row-reverse"}`}
           >
             {/* Promotion Content */}
             <div
-              className={`px-6 lg:px-0 w-1/2 flex items-center ${
+              className={`px-6 lg:px-0 w-full md:w-1/2 flex items-center ${
                 index % 2 === 0
                   ? "bg-primary text-white"
                   : "bg-white text-primary"
@@ -557,12 +557,8 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
             </div>
 
             {/* Promotion Image */}
-            <figure className="relative w-1/2">
-              <Image
-                image={item.primaryPhoto}
-                className="!h-full"
-                alt={`Image for promotion ${item.name}`}
-              />
+            <figure className="relative w-full md:w-1/2">
+              <Image image={item.primaryPhoto} className="!h-full !w-full" />
             </figure>
           </div>
         </article>
