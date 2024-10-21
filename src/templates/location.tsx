@@ -45,6 +45,11 @@ export const config: TemplateConfig = {
       "c_relatedOffers.shortDescriptionV2",
       "c_relatedOffers.c_primaryCTA",
       "c_relatedOffers.price",
+      "c_relatedServices.name",
+      "c_relatedServices.richTextDescriptionV2",
+      "c_relatedServices.c_primaryCTA",
+      "c_relatedServices.primaryPhoto",
+      "c_relatedServices.id",
       "c_relatedPromotions.name",
       "c_relatedPromotions.id",
       "c_relatedPromotions.shortDescriptionV2",
@@ -141,6 +146,7 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
     c_secondaryCTA,
     c_tertiaryCTA,
     photoGallery,
+    c_relatedServices,
   } = document;
 
   return (
@@ -307,7 +313,42 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
           </div>
         </div>
       </div>
+      {/* Services */}
+      {c_relatedServices && (
+        <div className="bg-white py-24 sm:py-32">
+          <div className="mx-auto px-6 lg:px-8 text-primary">
+            <div className="mx-auto sm:text-center">
+              <h2 className="text-6xl font-semibold leading-7 font-playFair">
+                Our Services
+              </h2>
+            </div>
 
+            <div className="px-[8%] mt-20 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+              {c_relatedServices.map((item) => (
+                <div key={item.id} className="group border rounded-md pb-4">
+                  <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-t-lg sm:aspect-h-3 sm:aspect-w-2">
+                    <Image image={item.primaryPhoto} />
+                  </div>
+                  <div className="px-4 mt-4 flex items-center justify-between text-2xl font-medium">
+                    <h3>{item.name}</h3>
+                  </div>
+                  <p className="mt-1 text-xl px-4 ">
+                    <LexicalRichText
+                      serializedAST={JSON.stringify(
+                        item.richTextDescriptionV2.json
+                      )}
+                    />
+                  </p>
+                  <Cta
+                    cta={item.c_primaryCTA}
+                    className="cta1-whitebg mx-auto mt-8 px-4 "
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
       {/* Offers Section */}
       {c_relatedPromotions.map((item, index: number) => {
         return (
