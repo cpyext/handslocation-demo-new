@@ -4,6 +4,10 @@ module.exports = {
   content: ["./src/**/*.{ts,tsx}", "./lib/**/*.{js,jsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        playFair: ['"Playfair Display"', "sans-serif"],
+        sofiaPro: ['"Sofia Sans"', "sans-serif"],
+      },
       colors: {
         primary: "rgba(0, 59, 117,1)",
         "primary-light": "var(--primary-color-light, #dbeafe)",

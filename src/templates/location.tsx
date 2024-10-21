@@ -7,7 +7,7 @@ import {
   TemplateConfig,
 } from "@yext/pages";
 import "../index.css";
-import { HoursTable, LexicalRichText } from "@yext/pages-components";
+import { Image, LexicalRichText } from "@yext/pages-components";
 import Hours from "../components/hours";
 import {
   BsFacebook,
@@ -17,6 +17,7 @@ import {
   BsTwitter,
   BsYoutube,
 } from "react-icons/bs";
+import Cta from "../components/cta";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -36,11 +37,21 @@ export const config: TemplateConfig = {
       "description",
       "hours",
       "slug",
+      "photoGallery",
+      "c_primaryCTA",
+      "c_secondaryCTA",
+      "c_tertiaryCTA",
       "c_relatedOffers.name",
       "c_relatedOffers.shortDescriptionV2",
       "c_relatedOffers.c_primaryCTA",
       "c_relatedOffers.price",
-      // "c_relatedPromotions",
+      "c_relatedPromotions.name",
+      "c_relatedPromotions.id",
+      "c_relatedPromotions.shortDescriptionV2",
+      "c_relatedPromotions.primaryPhoto",
+      "c_relatedPromotions.c_category",
+      "c_relatedPromotions.c_primaryCTA",
+      "c_relatedPromotions.c_secondaryCTA",
       // "c_ourServices",
     ],
     // Defines the scope of entities that qualify for this stream.
@@ -125,7 +136,13 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
     geocodedCoordinate,
     description,
     c_relatedOffers,
+    c_relatedPromotions,
+    c_primaryCTA,
+    c_secondaryCTA,
+    c_tertiaryCTA,
+    photoGallery,
   } = document;
+
   return (
     <>
       <div className="bg-[#043b76] text-white py-3">
@@ -178,15 +195,15 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
 
       {/* Hero section */}
       <div className="relative bg-primary text-white">
-        <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8 flex-row-reverse">
-          <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
-            <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="mx-auto flex flex-row-reverse">
+          <div className="px-6 pb-24 pt-10 sm:pb-32  lg:px-0 lg:pb-56 lg:pt-48 w-1/2">
+            <div className="mx-auto max-w-2xl ml-10">
               <div className="hidden sm:mt-32 sm:flex lg:mt-16">
-                <div className="relative rounded-full px-3 py-1 text-xl leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                <div className="relative px-3 py-1 text-xl leading-6 ">
                   {name.split("-")[0]}
                 </div>
               </div>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl font-playFair">
                 {address.city}, {address.region}
               </h1>
               <p className="mt-6 text-xl leading-8 ">
@@ -204,27 +221,9 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
               </p>
               <div className="mt-10 flex flex-col items-center gap-x-6">
                 <div className="flex gap-4 mb-4 items-center">
-                  <a
-                    href="https://handandstone.com/book-an-appointment/?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                    style={{ backgroundColor: "#043b76" }}
-                    className="text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center border border-white flex justify-center"
-                  >
-                    Book an Appointment
-                  </a>
-                  <a
-                    href="https://handandstone.com/locations/chesterfield/spa-menu/"
-                    style={{ backgroundColor: "#043b76" }}
-                    className="text-white text-lg px-6 py-3 rounded hover:bg-gray-700 text-center border border-white flex justify-center"
-                  >
-                    View Spa Menu
-                  </a>
-                  <a
-                    href="https://handandstone.com/gift-cards?location_id=0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                    style={{ backgroundColor: "#043b76" }}
-                    className="text-white text-lg px-6 py-3 rounded hover:bg-blue-500 text-center border border-white flex justify-center"
-                  >
-                    Buy a Gift Card
-                  </a>
+                  <Cta cta={c_primaryCTA} className="cta1-primarybg " />
+                  <Cta cta={c_secondaryCTA} className="cta1-primarybg " />
+                  <Cta cta={c_tertiaryCTA} className="cta1-primarybg " />
                 </div>
 
                 {/* Google Maps Section */}
@@ -239,12 +238,8 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
               </div>
             </div>
           </div>
-          <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
-            <img
-              alt=""
-              src="https://images.unsplash.com/photo-1498758536662-35b82cd15e29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2102&q=80"
-              className="aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
-            />
+          <div className="relative  lg:-mr-8 xl:absolute xl:inset-0  w-1/2">
+            <Image image={photoGallery[0]} className="!h-full" />
           </div>
         </div>
       </div>
@@ -254,10 +249,13 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
         <div className="w-1/2">
           <h2 className="text-5xl font-bold mb-6">
             <span className="text-3xl">Welcome</span>
-            <br /> Hand & Stone Massage and Facial Spa in {address.city},{" "}
-            {address.region}
+            <br />{" "}
+            <span className="font-playFair">
+              Hand & Stone Massage and Facial Spa in {address.city},{" "}
+              {address.region}
+            </span>
           </h2>
-          <p className="text-lg mb-4">{description}</p>
+          <p className="text-xl mb-4">{description}</p>
         </div>
         <div className="flex flex-col gap-4 w-1/2">
           <Hours hours={hours} title="Hours" />
@@ -268,470 +266,93 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
           <button className="cta2-whitebg">Get Directions</button>
         </div>
       </section>
-
-      {/* Our Services Section */}
-      <section className="bg-white py-8 bg-primary">
-        <div className="container mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-6">Our Services</h2>
-          <p className="text-xl mb-6 text-center">
-            We offer a range of services including massages, facials, and spa
-            treatments. Discover what Hand & Stone Chesterfield has to offer!
-          </p>
-          <div className="grid grid-cols-3 gap-12 w-full">
-            {c_relatedOffers.map((item, index) => {
-              return (
-                <div className="flex flex-col gap-2" key={index}>
-                  <img
-                    src="https://handandstone.com/wp-content/uploads/2023/01/Massage_Overview-Hero-1.jpg"
-                    alt="Massage"
-                    className="mx-auto mb-4"
-                  />
-                  <h3 className="text-2xl font-bold mb-4">Massages</h3>
-                  <p className="mb-4">
-                    Relax and unwind with our professional massage services.
+      {/* Introductury offers */}
+      <div className="bg-white py-24 sm:py-32">
+        <div className="mx-auto px-6 lg:px-8 text-primary">
+          <div className="mx-auto sm:text-center">
+            <h2 className="text-6xl font-semibold leading-7 font-playFair">
+              Introductory Offers
+            </h2>
+          </div>
+          <div className="mt-20 flow-root px-[8%]">
+            <div className="grid grid-cols-3 gap-24 items-center">
+              {c_relatedOffers.map((offer) => (
+                <div key={offer.id} className="pt-16 lg:pt-0 text-center">
+                  <h3 id={offer.id} className="text-xl leading-7 font-sofiaPro">
+                    {offer.name}
+                  </h3>
+                  <p className="mt-6 flex items-baseline justify-center gap-x-1">
+                    <span className="text-7xl font-bold tracking-tight  font-playFair">
+                      <sup className="text-4xl -mt-3 mr-2">$</sup>
+                      {offer.price.value}
+                    </span>
                   </p>
-                  <button className="cta1-whitebg">Book online</button>
+                  <hr className="h-[1px] my-8 text-primary" />
+                  <p className="leading-6 text-xl h-12 text-center">
+                    {offer.shortDescriptionV2 && (
+                      <LexicalRichText
+                        serializedAST={JSON.stringify(
+                          offer.shortDescriptionV2.json
+                        )}
+                      />
+                    )}
+                  </p>
+                  <Cta
+                    cta={offer.c_primaryCTA}
+                    className="cta1-whitebg mx-auto mt-8"
+                  />
                 </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-      <section className="container mx-auto p-6">
-        <h2 className="text-3xl font-bold mb-6 text-center">Our Services</h2>
-        <p className="text-lg mb-8 text-center">
-          We offer a range of services including massages, facials, and spa
-          treatments. Discover what Hand & Stone Chesterfield has to offer!
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-6 shadow-lg rounded-lg text-center">
-            <img
-              src="https://handandstone.com/wp-content/uploads/2023/01/Massage_Overview-Hero-1.jpg"
-              alt="Massage"
-              className="mx-auto mb-4"
-            />
-            <h3 className="text-2xl font-bold mb-4">Massages</h3>
-            <p className="mb-4">
-              Relax and unwind with our professional massage services.
-            </p>
-            <a
-              href="https://handandstone.com/massage/"
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500"
-            >
-              Explore Massages
-            </a>
-          </div>
-          <div className="bg-white p-6 shadow-lg rounded-lg text-center">
-            <img
-              src="https://handandstone.com/wp-content/uploads/2023/01/Facial_Overview-Hero.jpg"
-              alt="Facial"
-              className="mx-auto mb-4"
-            />
-            <h3 className="text-2xl font-bold mb-4">Facials</h3>
-            <p className="mb-4">
-              Rejuvenate your skin with our customized facial treatments.
-            </p>
-            <a
-              href="https://handandstone.com/facials/"
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500"
-            >
-              Explore Facials
-            </a>
-          </div>
-          <div className="bg-white p-6 shadow-lg rounded-lg text-center">
-            <img
-              src="https://handandstone.com/wp-content/uploads/2023/02/Cryoskin_Overview-Hero-1.jpg"
-              alt="Spa Treatments"
-              className="mx-auto mb-4"
-            />
-            <h3 className="text-2xl font-bold mb-4">Neveskin™</h3>
-            <p className="mb-4">
-              Shape, Tone, and Firm Your Physique. No suction, no surgery, just
-              incredible results
-            </p>
-            <a
-              href="#"
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500"
-            >
-              Explore Spa Treatments
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Gift Cards Section */}
-      <section className="bg-gray-50 py-8">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Gift Cards</h2>
-          <p className="text-lg mb-8">
-            Give the gift of relaxation with Hand & Stone Gift Cards, perfect
-            for any occasion.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 shadow-lg rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Buy Online</h3>
-              <p className="mb-4">
-                Purchase Hand & Stone Gift Cards conveniently online and send
-                them directly to your loved ones.
-              </p>
-              <a
-                href="https://handandstone.zenoti.com/webstoreNew/giftcards/0c4b087e-3de1-4412-b05f-bee1c335f9e8"
-                style={{ backgroundColor: "#043b76" }}
-                className="text-white px-4 py-2 rounded hover:bg-blue-500"
-              >
-                Buy Gift Cards
-              </a>
-            </div>
-            <div className="bg-white p-6 shadow-lg rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">In-Store Purchase</h3>
-              <p className="mb-4">
-                Visit our Chesterfield location to purchase gift cards and pick
-                them up in person.
-              </p>
-              <a
-                href="https://handandstone.com/locations/"
-                style={{ backgroundColor: "#043b76" }}
-                className="text-white px-4 py-2 rounded hover:bg-blue-500"
-              >
-                Find a Location
-              </a>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Spa Membership Section */}
-
-      <section style={{ backgroundColor: "#80384c" }} className="py-8">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-white">Spa Membership</h2>
-          <p className="text-lg text-white mb-8">
-            Become a member of Hand & Stone and enjoy exclusive benefits and
-            discounts year-round.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 shadow-lg rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Monthly Massages</h3>
-              <p className="mb-4">
-                Receive a 1-hour massage every month at a discounted membership
-                rate.
-              </p>
-            </div>
-            <div className="bg-white p-6 shadow-lg rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Facials and Skin Care</h3>
-              <p className="mb-4">
-                Enjoy personalized facials and skin care treatments as part of
-                your membership.
-              </p>
-            </div>
-            <div className="bg-white p-6 shadow-lg rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Exclusive Discounts</h3>
-              <p className="mb-4">
-                Members enjoy exclusive offers and discounts on additional
-                services and gift cards.
-              </p>
-            </div>
-          </div>
-          <a
-            href="https://handandstone.com/memberships/"
-            style={{ backgroundColor: "#043b76" }}
-            className="text-white px-4 py-2 mt-6 inline-block rounded hover:bg-blue-500"
-          >
-            Join Now
-          </a>
-        </div>
-      </section>
-
-      {/* Join Our Team Section */}
-      <section className="bg-gray-50 py-8">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Join Our Team</h2>
-          <p className="text-lg mb-8">
-            At Hand & Stone Chesterfield, we are always looking for talented and
-            passionate professionals to join our team. If you're a licensed
-            massage therapist, esthetician, or front desk professional, we'd
-            love to hear from you!
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 shadow-lg rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Massage Therapist</h3>
-              <p className="mb-4">
-                Join our team of professional massage therapists and help
-                clients relax and rejuvenate.
-              </p>
-            </div>
-            <div className="bg-white p-6 shadow-lg rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Esthetician</h3>
-              <p className="mb-4">
-                Be part of our esthetician team and provide personalized facial
-                and skincare services.
-              </p>
-            </div>
-            <div className="bg-white p-6 shadow-lg rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Front Desk Associate</h3>
-              <p className="mb-4">
-                Work at the front desk and help clients schedule appointments
-                and manage their spa experiences.
-              </p>
-            </div>
-          </div>
-          <a
-            href="#"
-            style={{ backgroundColor: "#043b76" }} // Replace with your desired hex color
-            className="text-white px-4 py-2 mt-6 inline-block rounded hover:bg-blue-500"
-          >
-            Apply Now
-          </a>
-        </div>
-      </section>
-
-      <div className="overflow-hidden relative">
-        <div className="flex animate-scroll whitespace-nowrap">
-          <img
-            src="https://handandstone.com/wp-content/uploads/2023/01/HD-7423Miami-024-1.jpg"
-            alt="Image 1"
-            className="w-200 h-80 object-cover mr-4"
-          />
-          <img
-            src="https://handandstone.com/wp-content/uploads/2023/01/HD-7423Miami-033-1.jpg"
-            alt="Image 2"
-            className="w-200 h-80 object-cover mr-4"
-          />
-          <img
-            src="https://handandstone.com/wp-content/uploads/2023/01/HD-7423Miami-019-1.jpg"
-            alt="Image 3"
-            className="w-200 h-80 object-cover mr-4"
-          />
         </div>
       </div>
 
-      <section className="bg-gray-100 py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
-            Sign Up for Special Offers
-          </h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Join our email list to receive special offers and updates!
-          </p>
-          <div className="flex justify-center mb-6">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="border border-gray-300 rounded-l-md px-4 py-2 w-80 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <a
-              href="https://handandstone.com/locations/chesterfield/"
-              className="bg-[#043b76] text-white px-6 py-2 rounded-r-md inline-block text-center"
+      {/* Offers Section */}
+      {c_relatedPromotions.map((item, index: number) => {
+        return (
+          <div className="relative bg-white" key={item.id}>
+            <div
+              className={`mx-auto flex  w-full ${index % 2 === 0 ? `flex-row` : `flex-row-reverse`}`}
             >
-              {" "}
-              Sign up{" "}
-            </a>
-          </div>
-          <p className="text-sm text-gray-500 mb-4">
-            By signing up, you agree to receive emails from Hand & Stone.
-          </p>
-
-          {/* Social Media Icons */}
-          <div className="flex justify-center space-x-4">
-            <a
-              href="https://www.facebook.com/handandstoneusa/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://handandstone.com/wp-content/uploads/2023/01/Vector-6.png"
-                alt="Facebook"
-                className="w-8 h-8"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/handandstoneusa/?hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://handandstone.com/wp-content/uploads/2023/01/Vector-5.png"
-                alt="Instagram"
-                className="w-8 h-8"
-              />
-            </a>
-            <a
-              href="https://twitter.com/handandstoneusa"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://handandstone.com/wp-content/uploads/2023/08/twitter_x.png"
-                alt="Twitter"
-                className="w-8 h-8"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/hand-and-stone-massage-and-facial-spa/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://handandstone.com/wp-content/uploads/2023/01/linkedin.png"
-                alt="LinkedIn"
-                className="w-8 h-8"
-              />
-            </a>
-            <a
-              href="https://www.youtube.com/user/HandAndStone/videos?app=desktop"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://handandstone.com/wp-content/uploads/2023/01/youtube.png"
-                alt="Music"
-                className="w-8 h-8"
-              />
-            </a>
-            <a
-              href="https://www.tiktok.com/@handandstoneusa"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://handandstone.com/wp-content/uploads/2023/02/tiktok-icon.png"
-                alt="Music"
-                className="w-8 h-8"
-              />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <bottom className="bg-[#043b76] py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Hand & Stone Section */}
-            <div className="border-r border-gray-300 pr-4">
-              <h3 className="text-lg font-bold mb-4">Hand & Stone</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Contact Us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Own A Franchise
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Hand & Stone Canada
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Services Section */}
-            <div className="border-r border-gray-300 pr-4">
-              <h3 className="text-lg font-bold mb-4">Services</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Massages
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Facials
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Neveskin
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Hair Removal
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* About Us Section */}
-            <div className="border-r border-gray-300 pr-4">
-              <h3 className="text-lg font-bold mb-4">About Us</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Our Story
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Touchpoints: News & Blog
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Join the Team
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Health & Safety
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Terms and Conditions Section */}
-            <div>
-              <h3 className="text-lg font-bold mb-4">Terms and Conditions</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Customer Bill of Rights
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Gift Card Program Terms & Conditions
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Reward Points Terms & Conditions
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Rules, Terms & Conditions
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Cookie Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    California Residents
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-blue-600">
-                    Policy on Non Discrimination & Gender Identity
-                  </a>
-                </li>
-              </ul>
+              <div
+                className={`px-6  lg:px-0  w-1/2 flex items-center ${index % 2 === 0 ? `bg-primary text-white` : `bg-white text-primary`}`}
+              >
+                <div className="mx-auto lg:mx-0 px-24 text-center">
+                  <div className="hidden sm:mt-32 sm:flex lg:mt-16 justify-center">
+                    <div className="relative rounded-full px-3 py-1 text-2xl leading-6">
+                      {item.c_category}
+                    </div>
+                  </div>
+                  <h1 className="mt-8 text-4xl font-bold tracking-tight sm:text-6xl font-playFair">
+                    {item.name}
+                  </h1>
+                  {item.shortDescriptionV2 && (
+                    <p className="mt-6 text-lg leading-8 ">
+                      <LexicalRichText
+                        serializedAST={JSON.stringify(
+                          item.shortDescriptionV2.json
+                        )}
+                      />
+                    </p>
+                  )}
+                  {item.c_primaryCTA && (
+                    <div className="mt-10 flex items-center gap-x-6 justify-center">
+                      <Cta
+                        cta={item.c_primaryCTA}
+                        className={`${index % 2 === 0 ? `cta1-primarybg` : `cta1-whitebg`}`}
+                      />
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div className="relative  w-1/2">
+                <Image image={item.primaryPhoto} className="!h-full" />
+              </div>
             </div>
           </div>
-        </div>
-      </bottom>
-
+        );
+      })}
       <footer className="bg-gray-900 text-white p-6">
         <div className="container mx-auto text-center">
           <p className="text-sm">

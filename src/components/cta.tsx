@@ -1,24 +1,23 @@
-
-
-type Cta = {
-  buttonText: string;
-  url: string;
-  style?: string;
+type CtaProps = {
+  cta: CTA;
+  className?: string;
 };
 
-const Cta = (props: Cta) => {
-  const { buttonText, url, style } = props;
+type CTA = {
+  label: string;
+  link: string;
+  linkType: string;
+};
 
+const Cta = ({ cta, className }: CtaProps) => {
   return (
     <a
-      href={url}
-      className={
-        `${style}` + " py-4 px-6 text-base font-bold text-white rounded-lg"
-      }
+      href={cta.link}
+      className={className}
       target="_blank"
       rel="noopener noreferrer"
     >
-      {buttonText}
+      {cta.label}
     </a>
   );
 };
