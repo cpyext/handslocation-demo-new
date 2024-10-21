@@ -503,9 +503,13 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
         </div>
       )}
       {/* Reviews */}
-      <div className="bg-white">
+      <div className="bg-white text-primary">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-          <h2 className="text-lg font-medium text-gray-900">Recent reviews</h2>
+          <div className="mx-auto sm:text-center">
+            <h2 className="text-6xl font-semibold leading-7 font-playFair">
+              Reviews
+            </h2>
+          </div>{" "}
           <div className="mt-6 space-y-10 divide-y divide-gray-200 border-b border-t border-gray-200 pb-10">
             {reviews.map((review) => (
               <div
@@ -527,29 +531,27 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
                         />
                       ))}
                     </div>
-                    <p className="ml-3 text-sm text-gray-700">
+                    <p className="ml-3 text-sm">
                       {review.rating}
                       <span className="sr-only"> out of 5 stars</span>
                     </p>
                   </div>
 
                   <div className="mt-4 lg:mt-6 xl:col-span-2 xl:mt-0">
-                    <h3 className="text-sm font-medium text-gray-900">
-                      {review.title}
-                    </h3>
+                    <h3 className="text-sm font-medium ">{review.title}</h3>
 
                     <div
                       dangerouslySetInnerHTML={{ __html: review.content }}
-                      className="mt-3 space-y-6 text-sm text-gray-500"
+                      className="mt-3 space-y-6 text-sm "
                     />
                   </div>
                 </div>
 
                 <div className="mt-6 flex items-center text-sm lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:mt-0 lg:flex-col lg:items-start xl:col-span-3">
-                  <p className="font-medium text-gray-900">{review.author}</p>
+                  <p className="font-medium ">{review.author}</p>
                   <time
                     dateTime={review.datetime}
-                    className="ml-4 border-l border-gray-200 pl-4 text-gray-500 lg:ml-0 lg:mt-2 lg:border-0 lg:pl-0"
+                    className="ml-4 border-l border-gray-200 pl-4 lg:ml-0 lg:mt-2 lg:border-0 lg:pl-0"
                   >
                     {review.date}
                   </time>
