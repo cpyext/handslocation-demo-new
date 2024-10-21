@@ -60,7 +60,7 @@ const Schema = (props: any) => {
         name: "Q3",
         acceptedAnswer: {
           "@type": "Answer",
-          text: item.answerV2,
+          text: JSON.stringify(item.answerV2.json),
         },
       })
     );
