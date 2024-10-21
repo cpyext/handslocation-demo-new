@@ -348,8 +348,8 @@ const Location: Template = ({ relativePrefixToRoot, path, document }) => {
                 <strong>Find us:</strong> {address.line1}, {address.city},{" "}
                 {address.region} {address.postalCode}
               </p>
-              <div className="mt-10 flex flex-col items-start gap-x-6 h-full justify-between">
-                <div className="flex flex-col md:flex-col gap-4 mb-4 items-start">
+              <div className="mt-10 flex flex-col items-start gap-12 h-full justify-between">
+                <div className="flex flex-col md:flex-row gap-4 mb-4 items-start">
                   <Cta cta={c_primaryCTA} className="cta1-primarybg" />
                   <Cta cta={c_secondaryCTA} className="cta1-primarybg" />
                   <Cta cta={c_tertiaryCTA} className="cta1-primarybg" />
