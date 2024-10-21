@@ -13,7 +13,7 @@ const FaqAccordion: React.FC = () => {
     <section className="py-12">
       <div className="container mx-auto px-4">
         {/* FAQs Section Label */}
-        <h2 className="text-3xl font-bold mb-8" style={{ color: '#0000FF' }}>FAQs</h2>
+        <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>FAQs</h2>
 
         <div className="space-y-4">
          
@@ -32,8 +32,7 @@ const FaqAccordion: React.FC = () => {
               </p>
               <a
             href="https://handandstone.ca/faqs-massage-therapist/"
-            className="text-white px-4 py-2 rounded hover:bg-blue-500 "
-            style={{ backgroundColor: '#043b76' }}>    
+            className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">    
             Learn More
           </a>
             </div>
@@ -53,8 +52,7 @@ const FaqAccordion: React.FC = () => {
               Twenty four hour advance notice is required on any appointment cancellation. Failure to do so will result in a fee equivalent to 50% of the cost of the scheduled service.              </p>
               <a
             href="https://handandstone.ca/faqs-massage-therapist/"
-            className="text-white px-4 py-2 rounded hover:bg-blue-500"
-            style={{ backgroundColor: '#043b76' }}>
+            className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
             Learn More
           </a>
             </div>
@@ -77,8 +75,7 @@ Must be over the age of 13 to receive a Teen facial.
               </p>
               <a
             href="https://handandstone.ca/faqs-massage-therapist/"
-            className="text-white px-4 py-2 rounded hover:bg-blue-500"
-            style={{ backgroundColor: '#043b76' }}>
+            className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
             Learn More
           </a>
             </div>

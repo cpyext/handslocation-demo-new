@@ -370,7 +370,7 @@ const Location: Template<TemplateRenderProps> = ({
         <section className="py-12">
           <div className="container mx-auto px-4">
             {/* FAQs Section Label */}
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#043b76' }}>FAQs</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>FAQs</h2>
 
             <div className="space-y-4">
               {/* FAQ 1 */}
@@ -384,8 +384,7 @@ const Location: Template<TemplateRenderProps> = ({
                   </p>
                   <a
                     href="https://handandstone.ca/faqs-massage-therapist/"
-                    style={{ backgroundColor: '#043b76' }}
-                    className="text-white px-4 py-2 mt-6 inline-block rounded hover:bg-blue-500">
+                    className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
                     Learn More
                   </a>
                 </div>
@@ -403,8 +402,7 @@ const Location: Template<TemplateRenderProps> = ({
                   </p>
                   <a
                     href="https://handandstone.ca/faqs-massage-therapist/"
-                    className="text-white px-4 py-2 rounded hover:bg-blue-500"
-                    style={{ backgroundColor: '#043b76' }}>
+                    className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
                     Learn More
                   </a>
 
@@ -424,8 +422,7 @@ const Location: Template<TemplateRenderProps> = ({
                   </p>
                   <a
                     href="https://handandstone.ca/faqs-massage-therapist/"
-                    className="mt-2 inline-block text-sm font-semibold underline"
-                    style={{ color: '#000000' }}>
+                    className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
                     Learn More
                   </a>
                 </div>
@@ -460,9 +457,8 @@ const Location: Template<TemplateRenderProps> = ({
             </div>
           </div>
           <a
-            href="#"
-            style={{ backgroundColor: '#043b76' }}  // Replace with your desired hex color
-            className="text-white px-4 py-2 mt-6 inline-block rounded hover:bg-blue-500">
+            href="https://handandstonecareers.careerplug.com/jobs"
+            className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">
             Apply Now
           </a>
         </div>
@@ -501,8 +497,9 @@ const Location: Template<TemplateRenderProps> = ({
             <input
               type="email"
               placeholder="Enter your email"
-              className="border border-gray-300 rounded-l-md px-4 py-2 w-80 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-            <a href="https://handandstone.com/locations/chesterfield/" className="bg-[#043b76] text-white px-6 py-2 rounded-r-md inline-block text-center"> Sign up </a>
+              className="border border-[#043b76] rounded-l-md px-4 py-2 w-80 focus:outline-none focus:ring-2 focus:ring-[#043b76]"/>
+
+            <a href="https://handandstone.com/locations/chesterfield/"  className="text-white text-lg px-3 py-1.5 rounded bg-[#043b76] border-2 border-[#043b76] hover:bg-[#FFFFFF] hover:text-[#043b76] hover:border-[#043b76] text-center">Sign up </a>
           </div>
           <p className="text-sm text-gray-500 mb-4">
             By signing up, you agree to receive emails from Hand & Stone.
@@ -513,22 +510,22 @@ const Location: Template<TemplateRenderProps> = ({
 
           {/* Social Media Icons */}
           <div className="flex justify-center space-x-4">
-            <a href="https://www.facebook.com/handandstoneusa/" target="_blank" rel="noopener noreferrer">
-              <img src="https://handandstone.com/wp-content/uploads/2023/01/Vector-6.png" alt="Facebook" className="w-8 h-8" />
+            <a href="https://www.facebook.com/handandstoneusa/" target="_blank" rel="noopener noreferrer" className="bg-[#043b76] p-2 rounded hover:bg-[#0056b3]">
+              <img src="https://handandstone.com/wp-content/uploads/2023/01/Vector-6.png" alt="Facebook" className="w-6 h-6" />
             </a>
-            <a href="https://www.instagram.com/handandstoneusa/?hl=en" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/handandstoneusa/?hl=en" target="_blank" rel="noopener noreferrer" className="bg-[#043b76] p-2 rounded hover:bg-[#0056b3]">
               <img src="https://handandstone.com/wp-content/uploads/2023/01/Vector-5.png" alt="Instagram" className="w-8 h-8" />
             </a>
-            <a href="https://twitter.com/handandstoneusa" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/handandstoneusa" target="_blank" rel="noopener noreferrer" className="bg-[#043b76] p-2 rounded hover:bg-[#0056b3]">
               <img src="https://handandstone.com/wp-content/uploads/2023/08/twitter_x.png" alt="Twitter" className="w-8 h-8" />
             </a>
-            <a href="https://www.linkedin.com/company/hand-and-stone-massage-and-facial-spa/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/hand-and-stone-massage-and-facial-spa/" target="_blank" rel="noopener noreferrer" className="bg-[#043b76] p-2 rounded hover:bg-[#0056b3]">
               <img src="https://handandstone.com/wp-content/uploads/2023/01/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
             </a>
-            <a href="https://www.youtube.com/user/HandAndStone/videos?app=desktop" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/user/HandAndStone/videos?app=desktop" target="_blank" rel="noopener noreferrer" className="bg-[#043b76] p-2 rounded hover:bg-[#0056b3]">
               <img src="https://handandstone.com/wp-content/uploads/2023/01/youtube.png" alt="Music" className="w-8 h-8" />
             </a>
-            <a href="https://www.tiktok.com/@handandstoneusa" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.tiktok.com/@handandstoneusa" target="_blank" rel="noopener noreferrer" className="bg-[#043b76] p-2 rounded hover:bg-[#0056b3]">
               <img src="https://handandstone.com/wp-content/uploads/2023/02/tiktok-icon.png" alt="Music" className="w-8 h-8" />
             </a>
           </div>
@@ -544,9 +541,9 @@ const Location: Template<TemplateRenderProps> = ({
             <div className="border-r border-gray-300 pr-4">
               <h3 className="text-lg font-bold mb-4">Hand & Stone</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Contact Us</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Own A Franchise</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Hand & Stone Canada</a></li>
+                <li><a href="https://handandstonefeedback.smg.com/" className="text-gray-600 hover:text-blue-600">Contact Us</a></li>
+                <li><a href="https://handandstone.com/franchise/?SRC=consumer" className="text-gray-600 hover:text-blue-600">Own A Franchise</a></li>
+                <li><a href="https://www.handandstone.ca/" className="text-gray-600 hover:text-blue-600">Hand & Stone Canada</a></li>
               </ul>
             </div>
 
@@ -554,10 +551,10 @@ const Location: Template<TemplateRenderProps> = ({
             <div className="border-r border-gray-300 pr-4">
               <h3 className="text-lg font-bold mb-4">Services</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Massages</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Facials</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Neveskin</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Hair Removal</a></li>
+                <li><a href="https://handandstone.com/massage/" className="text-gray-600 hover:text-blue-600">Massages</a></li>
+                <li><a href="https://handandstone.com/facials/" className="text-gray-600 hover:text-blue-600">Facials</a></li>
+                <li><a href="https://handandstone.com/neveskin/" className="text-gray-600 hover:text-blue-600">Neveskin</a></li>
+                <li><a href="https://handandstone.com/hair-removal/" className="text-gray-600 hover:text-blue-600">Hair Removal</a></li>
               </ul>
             </div>
 
@@ -565,10 +562,10 @@ const Location: Template<TemplateRenderProps> = ({
             <div className="border-r border-gray-300 pr-4">
               <h3 className="text-lg font-bold mb-4">About Us</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Our Story</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Touchpoints: News & Blog</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Join the Team</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Health & Safety</a></li>
+                <li><a href="https://handandstone.com/our-story/" className="text-gray-600 hover:text-blue-600">Our Story</a></li>
+                <li><a href="https://handandstone.com/touchpoints/" className="text-gray-600 hover:text-blue-600">Touchpoints: News & Blog</a></li>
+                <li><a href="https://handandstonecareers.com/" className="text-gray-600 hover:text-blue-600">Join the Team</a></li>
+                <li><a href="https://handandstone.com/health-safety/" className="text-gray-600 hover:text-blue-600">Health & Safety</a></li>
               </ul>
             </div>
 
@@ -576,14 +573,14 @@ const Location: Template<TemplateRenderProps> = ({
             <div>
               <h3 className="text-lg font-bold mb-4">Terms and Conditions</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Customer Bill of Rights</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Gift Card Program Terms & Conditions</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Reward Points Terms & Conditions</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Rules, Terms & Conditions</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Cookie Policy</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">California Residents</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-blue-600">Policy on Non Discrimination & Gender Identity</a></li>
+                <li><a href="https://handandstone.com/legal/customer-bill-of-rights/" className="text-gray-600 hover:text-blue-600">Customer Bill of Rights</a></li>
+                <li><a href="https://handandstone.com/legal/gift-terms-and-conditions/" className="text-gray-600 hover:text-blue-600">Gift Card Program Terms & Conditions</a></li>
+                <li><a href="https://handandstone.com/legal/rewards-terms-and-conditions/" className="text-gray-600 hover:text-blue-600">Reward Points Terms & Conditions</a></li>
+                <li><a href="https://handandstone.com/legal/rewards-terms-and-conditions/" className="text-gray-600 hover:text-blue-600">Rules, Terms & Conditions</a></li>
+                <li><a href="https://handandstone.com/legal/privacy-policy/" className="text-gray-600 hover:text-blue-600">Privacy Policy</a></li>
+                <li><a href="https://handandstone.com/legal/cookie-policy/" className="text-gray-600 hover:text-blue-600">Cookie Policy</a></li>
+                <li><a href="https://handandstone.com/legal/california-residents/" className="text-gray-600 hover:text-blue-600">California Residents</a></li>
+                <li><a href="https://handandstone.com/legal/non-discrimination-policy/" className="text-gray-600 hover:text-blue-600">Policy on Non Discrimination & Gender Identity</a></li>
               </ul>
             </div>
           </div>
